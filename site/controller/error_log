@@ -1,0 +1,462 @@
+[22-Oct-2024 07:40:14 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[22-Oct-2024 07:40:14 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[22-Oct-2024 07:40:38 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[22-Oct-2024 07:40:46 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[22-Oct-2024 07:40:46 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php:23
+Stack trace:
+#0 /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php(23): PDOStatement->execute()
+#1 /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php(45): Aluno->buscarPorId()
+#2 {main}
+  thrown in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php on line 23
+[22-Oct-2024 07:40:51 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[22-Oct-2024 07:40:51 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php:23
+Stack trace:
+#0 /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php(23): PDOStatement->execute()
+#1 /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php(45): Aluno->buscarPorId()
+#2 {main}
+  thrown in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php on line 23
+[22-Oct-2024 07:41:02 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[22-Oct-2024 07:41:02 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php:23
+Stack trace:
+#0 /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php(23): PDOStatement->execute()
+#1 /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php(45): Aluno->buscarPorId()
+#2 {main}
+  thrown in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php on line 23
+[22-Oct-2024 07:41:05 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[22-Oct-2024 07:41:05 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php:23
+Stack trace:
+#0 /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php(23): PDOStatement->execute()
+#1 /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php(45): Aluno->buscarPorId()
+#2 {main}
+  thrown in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php on line 23
+[22-Oct-2024 07:41:31 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[22-Oct-2024 07:41:31 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php:23
+Stack trace:
+#0 /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php(23): PDOStatement->execute()
+#1 /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php(45): Aluno->buscarPorId()
+#2 {main}
+  thrown in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php on line 23
+[22-Oct-2024 07:41:34 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[22-Oct-2024 07:41:34 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php:23
+Stack trace:
+#0 /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php(23): PDOStatement->execute()
+#1 /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php(45): Aluno->buscarPorId()
+#2 {main}
+  thrown in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php on line 23
+[22-Oct-2024 07:42:16 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[22-Oct-2024 07:42:16 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php:23
+Stack trace:
+#0 /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php(23): PDOStatement->execute()
+#1 /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php(45): Aluno->buscarPorId()
+#2 {main}
+  thrown in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php on line 23
+[22-Oct-2024 07:42:18 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[22-Oct-2024 07:42:18 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php:23
+Stack trace:
+#0 /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php(23): PDOStatement->execute()
+#1 /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php(45): Aluno->buscarPorId()
+#2 {main}
+  thrown in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php on line 23
+[22-Oct-2024 07:42:20 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[22-Oct-2024 07:42:20 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php:23
+Stack trace:
+#0 /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php(23): PDOStatement->execute()
+#1 /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php(45): Aluno->buscarPorId()
+#2 {main}
+  thrown in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php on line 23
+[22-Oct-2024 07:42:20 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[22-Oct-2024 07:42:20 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php:23
+Stack trace:
+#0 /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php(23): PDOStatement->execute()
+#1 /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php(45): Aluno->buscarPorId()
+#2 {main}
+  thrown in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php on line 23
+[22-Oct-2024 07:42:20 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[22-Oct-2024 07:42:20 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php:23
+Stack trace:
+#0 /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php(23): PDOStatement->execute()
+#1 /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php(45): Aluno->buscarPorId()
+#2 {main}
+  thrown in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php on line 23
+[22-Oct-2024 07:42:20 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[22-Oct-2024 07:42:20 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php:23
+Stack trace:
+#0 /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php(23): PDOStatement->execute()
+#1 /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php(45): Aluno->buscarPorId()
+#2 {main}
+  thrown in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php on line 23
+[22-Oct-2024 07:42:21 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[22-Oct-2024 07:42:21 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php:23
+Stack trace:
+#0 /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php(23): PDOStatement->execute()
+#1 /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php(45): Aluno->buscarPorId()
+#2 {main}
+  thrown in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php on line 23
+[22-Oct-2024 07:42:21 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[22-Oct-2024 07:42:21 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php:23
+Stack trace:
+#0 /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php(23): PDOStatement->execute()
+#1 /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php(45): Aluno->buscarPorId()
+#2 {main}
+  thrown in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php on line 23
+[22-Oct-2024 07:49:29 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:11:08 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:11:59 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:14:29 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:16:27 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:17:33 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:18:12 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:18:52 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:19:18 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:19:45 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:20:00 America/Sao_Paulo] PHP Warning:  Undefined variable $page in /home/diogoram/public_html/ete/aie-homol/site/controller/listaAlunoController.php on line 17
+[23-Oct-2024 13:20:24 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:20:56 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:21:30 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:22:23 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:22:51 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:23:15 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:23:42 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:24:04 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:25:16 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:25:42 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:26:04 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:26:27 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:26:49 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:27:30 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:27:53 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:28:15 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[23-Oct-2024 13:28:38 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[24-Oct-2024 11:23:58 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 30 in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 48
+[24-Oct-2024 11:24:03 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 30 in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 48
+[24-Oct-2024 11:24:05 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 30 in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 48
+[24-Oct-2024 11:24:06 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 30 in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 48
+[24-Oct-2024 11:24:50 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 30 in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 48
+[24-Oct-2024 11:25:25 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 30 in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 48
+[24-Oct-2024 11:25:26 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 30 in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 48
+[24-Oct-2024 11:25:29 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 30 in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 48
+[24-Oct-2024 11:25:34 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 30 in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 48
+[24-Oct-2024 11:33:20 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[24-Oct-2024 11:34:37 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[24-Oct-2024 11:34:54 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 30 in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 48
+[24-Oct-2024 11:37:14 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 30 in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 48
+[24-Oct-2024 11:37:42 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 30 in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 48
+[24-Oct-2024 13:33:29 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[24-Oct-2024 20:20:59 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[24-Oct-2024 20:21:43 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 30 in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 48
+[24-Oct-2024 20:33:28 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 30 in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 48
+[24-Oct-2024 20:34:43 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 30 in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 48
+[24-Oct-2024 20:59:30 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 30 in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 48
+[24-Oct-2024 21:23:48 America/Sao_Paulo] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in /home/diogoram/public_html/ete/aie-homol/site/model/email.php on line 28
+[24-Oct-2024 21:23:48 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[24-Oct-2024 21:23:48 America/Sao_Paulo] PHP Warning:  Undefined variable $dataFormatada in /home/diogoram/public_html/ete/aie-homol/site/view/controleAcesso_sucesso.php on line 36
+[24-Oct-2024 21:37:07 America/Sao_Paulo] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in /home/diogoram/public_html/ete/aie-homol/site/model/email.php on line 28
+[24-Oct-2024 21:37:07 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[24-Oct-2024 21:37:07 America/Sao_Paulo] PHP Warning:  Undefined variable $dataFormatada in /home/diogoram/public_html/ete/aie-homol/site/view/controleAcesso_sucesso.php on line 36
+[25-Oct-2024 19:34:58 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[25-Oct-2024 19:34:58 America/Sao_Paulo] PHP Warning:  Undefined array key 0 in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 5
+[25-Oct-2024 19:34:58 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 5
+[25-Oct-2024 19:34:58 America/Sao_Paulo] PHP Warning:  Undefined array key 0 in /home/diogoram/public_html/ete/aie-homol/site/view/controleAcesso_sucesso.php on line 34
+[25-Oct-2024 19:34:58 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home/diogoram/public_html/ete/aie-homol/site/view/controleAcesso_sucesso.php on line 34
+[25-Oct-2024 19:34:58 America/Sao_Paulo] PHP Warning:  Undefined array key 0 in /home/diogoram/public_html/ete/aie-homol/site/view/controleAcesso_sucesso.php on line 35
+[25-Oct-2024 19:34:58 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home/diogoram/public_html/ete/aie-homol/site/view/controleAcesso_sucesso.php on line 35
+[25-Oct-2024 19:34:58 America/Sao_Paulo] PHP Warning:  Undefined variable $dataFormatada in /home/diogoram/public_html/ete/aie-homol/site/view/controleAcesso_sucesso.php on line 36
+[25-Oct-2024 19:34:58 America/Sao_Paulo] PHP Warning:  Undefined array key 0 in /home/diogoram/public_html/ete/aie-homol/site/view/controleAcesso_sucesso.php on line 37
+[25-Oct-2024 19:34:58 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home/diogoram/public_html/ete/aie-homol/site/view/controleAcesso_sucesso.php on line 37
+[25-Oct-2024 19:34:58 America/Sao_Paulo] PHP Warning:  Undefined array key 0 in /home/diogoram/public_html/ete/aie-homol/site/view/controleAcesso_sucesso.php on line 38
+[25-Oct-2024 19:34:58 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home/diogoram/public_html/ete/aie-homol/site/view/controleAcesso_sucesso.php on line 38
+[25-Oct-2024 19:34:58 America/Sao_Paulo] PHP Warning:  Undefined array key 0 in /home/diogoram/public_html/ete/aie-homol/site/view/controleAcesso_sucesso.php on line 48
+[25-Oct-2024 19:34:58 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home/diogoram/public_html/ete/aie-homol/site/view/controleAcesso_sucesso.php on line 48
+[25-Oct-2024 20:16:07 America/Sao_Paulo] PHP Warning:  Undefined array key "nome" in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 26
+[25-Oct-2024 20:16:07 America/Sao_Paulo] PHP Warning:  Undefined array key "email" in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 27
+[25-Oct-2024 20:16:08 America/Sao_Paulo] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in /home/diogoram/public_html/ete/aie-homol/site/model/email.php on line 28
+[25-Oct-2024 20:16:08 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[25-Oct-2024 20:24:15 America/Sao_Paulo] PHP Warning:  Undefined array key "nome" in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 26
+[25-Oct-2024 20:24:15 America/Sao_Paulo] PHP Warning:  Undefined array key "email" in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 27
+[25-Oct-2024 20:24:15 America/Sao_Paulo] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in /home/diogoram/public_html/ete/aie-homol/site/model/email.php on line 28
+[25-Oct-2024 20:24:15 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[25-Oct-2024 21:00:33 America/Sao_Paulo] PHP Warning:  Array to string conversion in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 22
+[25-Oct-2024 21:00:33 America/Sao_Paulo] PHP Warning:  Undefined variable $Array in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 22
+[25-Oct-2024 21:00:33 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 22
+[25-Oct-2024 21:00:33 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[25-Oct-2024 21:05:10 America/Sao_Paulo] PHP Warning:  Undefined array key "nome" in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 22
+[25-Oct-2024 21:05:10 America/Sao_Paulo] PHP Warning:  Undefined array key "email" in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 23
+[25-Oct-2024 21:05:10 America/Sao_Paulo] PHP Warning:  Array to string conversion in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 24
+[25-Oct-2024 21:05:10 America/Sao_Paulo] PHP Warning:  Undefined variable $Array in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 24
+[25-Oct-2024 21:05:10 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 24
+[25-Oct-2024 21:05:10 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[25-Oct-2024 21:15:19 America/Sao_Paulo] PHP Warning:  Undefined array key "nome" in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 25
+[25-Oct-2024 21:15:19 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[25-Oct-2024 21:17:06 America/Sao_Paulo] PHP Warning:  Undefined array key "nome" in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 29
+[25-Oct-2024 21:17:06 America/Sao_Paulo] PHP Warning:  Undefined array key "email" in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 30
+[25-Oct-2024 21:17:07 America/Sao_Paulo] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in /home/diogoram/public_html/ete/aie-homol/site/model/email.php on line 28
+[25-Oct-2024 21:17:07 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[25-Oct-2024 21:17:24 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[25-Oct-2024 21:17:47 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[25-Oct-2024 21:19:30 America/Sao_Paulo] PHP Warning:  Undefined array key "nome" in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 29
+[25-Oct-2024 21:19:30 America/Sao_Paulo] PHP Warning:  Undefined array key "email" in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoLiberado.php on line 30
+[25-Oct-2024 21:19:30 America/Sao_Paulo] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in /home/diogoram/public_html/ete/aie-homol/site/model/email.php on line 28
+[25-Oct-2024 21:19:30 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[25-Oct-2024 21:21:14 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[25-Oct-2024 21:22:59 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[29-Oct-2024 20:14:40 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:13:41 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:15:09 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:15:53 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:17:06 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:17:19 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:17:49 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:18:01 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:20:29 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:20:41 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:22:48 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:23:12 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:23:43 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:24:17 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:25:57 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:26:11 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:27:08 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:27:25 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:28:02 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:28:09 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:28:48 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:29:11 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:29:38 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:29:51 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:30:24 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:30:37 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:30:55 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:31:19 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:32:01 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:32:51 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:33:12 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:33:47 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:34:00 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:34:28 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:34:40 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:35:09 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:35:28 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:35:50 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:36:10 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:36:44 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:36:55 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:37:22 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:37:31 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:37:56 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:38:09 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:38:31 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:38:44 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:39:11 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:39:24 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:43:06 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:43:38 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:43:49 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:44:17 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:44:32 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:45:06 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:45:25 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:45:50 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:46:07 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 09:46:40 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[31-Oct-2024 09:46:52 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 16:01:59 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 20:40:50 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 20:41:54 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 20:45:35 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[31-Oct-2024 20:57:18 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[07-Nov-2024 08:57:46 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[07-Nov-2024 08:59:29 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[07-Nov-2024 09:03:30 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[07-Nov-2024 09:03:50 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[07-Nov-2024 09:04:34 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[07-Nov-2024 09:04:57 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[07-Nov-2024 09:06:09 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[07-Nov-2024 09:06:44 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[07-Nov-2024 09:07:00 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[12-Nov-2024 08:00:16 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[12-Nov-2024 08:01:23 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 15:52:44 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 15:54:05 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 15:55:32 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 15:55:59 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 15:56:33 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 15:58:40 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 15:58:56 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 15:59:14 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 15:59:53 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 16:01:27 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 16:01:44 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 16:02:03 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 16:03:13 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 16:03:41 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 16:04:07 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 16:04:21 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 16:04:35 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 16:04:53 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 16:05:03 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 16:06:18 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 16:08:59 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 16:09:39 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 16:09:53 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 16:10:10 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 16:10:48 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 16:11:08 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 16:11:24 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[19-Nov-2024 16:11:45 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 07:22:15 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 07:26:53 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 07:27:07 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 07:27:38 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 07:28:02 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 07:28:39 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 07:28:55 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 07:29:06 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 07:29:22 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 07:31:34 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 07:38:41 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 07:42:04 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 07:42:19 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 07:44:25 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 07:45:40 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 07:47:40 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 07:54:08 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 07:57:41 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 08:02:47 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 08:03:58 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 08:08:20 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 08:08:36 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 08:10:19 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 08:10:50 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 08:11:47 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 08:13:40 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 08:25:59 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 08:37:14 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 08:39:14 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 08:39:36 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 10:22:50 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php:23
+Stack trace:
+#0 /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php(23): PDOStatement->execute()
+#1 /home/diogoram/public_html/ete/aie-homol/site/controller/alunoController.php(38): Aluno->buscarPorId()
+#2 {main}
+  thrown in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php on line 23
+[21-Nov-2024 11:58:10 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '6' at line 1 in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php:23
+Stack trace:
+#0 /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php(23): PDOStatement->execute()
+#1 /home/diogoram/public_html/ete/aie-homol/site/controller/alunoController.php(38): Aluno->buscarPorId()
+#2 {main}
+  thrown in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php on line 23
+[21-Nov-2024 15:27:09 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[21-Nov-2024 15:40:40 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[21-Nov-2024 15:41:17 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[22-Nov-2024 07:21:15 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 07:23:00 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 07:23:20 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 07:23:38 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 07:24:19 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 07:24:32 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 07:24:44 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 07:25:19 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 07:25:31 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 07:25:44 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 07:25:58 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 07:27:22 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 07:34:01 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 07:39:56 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 07:48:31 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 07:48:49 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 07:49:03 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 07:50:53 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 07:51:57 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 07:52:21 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 08:02:41 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 08:04:55 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 08:15:36 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 08:17:45 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 08:26:09 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 08:26:30 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 08:28:19 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 08:36:35 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[22-Nov-2024 08:37:29 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[25-Nov-2024 09:19:06 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[25-Nov-2024 09:19:54 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[25-Nov-2024 09:37:06 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[25-Nov-2024 10:23:01 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[25-Nov-2024 10:23:22 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[25-Nov-2024 10:28:53 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[25-Nov-2024 10:31:32 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[25-Nov-2024 11:08:16 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[25-Nov-2024 11:08:33 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[25-Nov-2024 11:41:23 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[25-Nov-2024 11:41:37 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[26-Nov-2024 06:37:39 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[26-Nov-2024 06:54:04 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[26-Nov-2024 07:06:51 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[26-Nov-2024 07:23:09 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[26-Nov-2024 07:27:16 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[26-Nov-2024 07:27:50 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[26-Nov-2024 07:28:05 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[26-Nov-2024 07:28:17 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[26-Nov-2024 07:29:42 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[26-Nov-2024 07:34:27 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[26-Nov-2024 07:35:22 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[26-Nov-2024 07:45:07 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[26-Nov-2024 07:50:55 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[26-Nov-2024 07:51:07 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[26-Nov-2024 07:54:32 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[26-Nov-2024 07:54:51 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[26-Nov-2024 08:04:32 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[26-Nov-2024 08:14:38 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[26-Nov-2024 08:15:09 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[26-Nov-2024 08:15:22 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[26-Nov-2024 08:17:21 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[26-Nov-2024 08:44:19 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 07:21:38 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 07:25:31 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 07:26:59 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 07:34:45 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 07:35:00 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 07:36:18 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 07:40:17 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 07:43:18 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 07:43:29 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 07:43:38 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 07:43:52 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 07:44:10 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 07:52:49 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 08:13:34 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 08:13:36 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 08:13:57 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 08:15:16 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 08:16:13 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 08:16:35 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 08:18:01 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 08:20:48 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[28-Nov-2024 08:21:06 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 08:24:04 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 08:24:31 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 08:38:14 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[28-Nov-2024 08:39:38 America/Sao_Paulo] PHP Warning:  Undefined variable $idAluno in /home/diogoram/public_html/ete/aie-homol/site/controller/biometriaController.php on line 11
+[28-Nov-2024 08:39:54 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[28-Nov-2024 11:06:32 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[29-Nov-2024 14:22:53 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ',;~.bhk m n n rosinha' at line 1 in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php:23
+Stack trace:
+#0 /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php(23): PDOStatement->execute()
+#1 /home/diogoram/public_html/ete/aie-homol/site/controller/alunoController.php(38): Aluno->buscarPorId()
+#2 {main}
+  thrown in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php on line 23
+[02-Dec-2024 07:42:13 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[02-Dec-2024 07:44:05 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[02-Dec-2024 08:17:47 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '*' at line 1 in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php:23
+Stack trace:
+#0 /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php(23): PDOStatement->execute()
+#1 /home/diogoram/public_html/ete/aie-homol/site/controller/alunoController.php(38): Aluno->buscarPorId()
+#2 {main}
+  thrown in /home/diogoram/public_html/ete/aie-homol/site/model/aluno.php on line 23
+[03-Dec-2024 07:32:13 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[03-Dec-2024 07:34:03 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[03-Dec-2024 07:34:16 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[03-Dec-2024 07:50:34 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[03-Dec-2024 07:57:35 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[04-Dec-2024 07:27:23 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[04-Dec-2024 07:30:20 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
+[04-Dec-2024 08:08:10 America/Sao_Paulo] PHP Warning:  Undefined variable $digital in /home/diogoram/public_html/ete/aie-homol/site/controller/acessoAjax.php on line 4
