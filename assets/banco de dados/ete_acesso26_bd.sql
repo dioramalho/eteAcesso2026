@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 05-Mar-2026 às 02:35
+-- Generation Time: 14-Mar-2026 às 01:06
 -- Versão do servidor: 10.1.38-MariaDB
 -- versão do PHP: 5.6.40
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `acessoete26_bd`
+-- Database: `ete_acesso26_bd`
 --
 
 -- --------------------------------------------------------
@@ -43,6 +43,13 @@ CREATE TABLE `aluno` (
   `imagem` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Extraindo dados da tabela `aluno`
+--
+
+INSERT INTO `aluno` (`id`, `Matricula`, `Nome`, `Data_Nasc`, `Sexo`, `Serie`, `Curso`, `email`, `Telefone`, `biometria01`, `biometria02`, `imagem`) VALUES
+(1, 111, 'Aluno da Silva', '30/11/1984', 'M', '3', 'SI', 'aluno@ete.com.br', '(81)997941373', '1111111', '', 'teste.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -56,6 +63,13 @@ CREATE TABLE `coordenacao` (
   `senha` varchar(8) NOT NULL
 ) ENGINE=Aria DEFAULT CHARSET=utf8mb4;
 
+--
+-- Extraindo dados da tabela `coordenacao`
+--
+
+INSERT INTO `coordenacao` (`id`, `nome`, `email`, `senha`) VALUES
+(1, 'Coordenador', 'coord@ete.com.br', '123');
+
 -- --------------------------------------------------------
 
 --
@@ -64,7 +78,7 @@ CREATE TABLE `coordenacao` (
 
 CREATE TABLE `frequencia` (
   `id` int(11) NOT NULL,
-  `idAluno2` int(11) NOT NULL,
+  `idAluno` int(11) NOT NULL,
   `acesso_registro` datetime NOT NULL,
   `acesso_data` date NOT NULL,
   `acesso_hora` time NOT NULL,
@@ -87,6 +101,13 @@ CREATE TABLE `responsavel` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Extraindo dados da tabela `responsavel`
+--
+
+INSERT INTO `responsavel` (`id`, `nome`, `email`, `telefone`, `senha`, `idAluno`) VALUES
+(1, 'Pai de Aluno', 'pai@ete.com.br', '(81)997941373', '123', 1);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -107,14 +128,13 @@ ALTER TABLE `coordenacao`
 -- Indexes for table `frequencia`
 --
 ALTER TABLE `frequencia`
-  ADD PRIMARY KEY (`id`) USING BTREE;
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `responsavel`
 --
 ALTER TABLE `responsavel`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_idAluno` (`idAluno`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -124,13 +144,13 @@ ALTER TABLE `responsavel`
 -- AUTO_INCREMENT for table `aluno`
 --
 ALTER TABLE `aluno`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=468;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `coordenacao`
 --
 ALTER TABLE `coordenacao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `frequencia`
@@ -142,23 +162,7 @@ ALTER TABLE `frequencia`
 -- AUTO_INCREMENT for table `responsavel`
 --
 ALTER TABLE `responsavel`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- Constraints for dumped tables
---
-
---
--- Limitadores para a tabela `frequencia`
---
-ALTER TABLE `frequencia`
-  ADD CONSTRAINT `fk_id_aluno` FOREIGN KEY (`idAluno2`) REFERENCES `aluno` (`id`);
-
---
--- Limitadores para a tabela `responsavel`
---
-ALTER TABLE `responsavel`
-  ADD CONSTRAINT `fk_idAluno` FOREIGN KEY (`idAluno`) REFERENCES `aluno` (`id`);
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
