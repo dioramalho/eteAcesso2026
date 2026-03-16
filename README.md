@@ -38,7 +38,7 @@ eteAcesso2026/
 O banco de dados do projeto está disponível no arquivo:
 
 ```
-acessoete26_bd.sql
+C:\xampp\htdocs\eteAcesso2026\assets\banco de dados\ete_acesso26_bd.sql
 ```
 
 ### Para importar
@@ -47,7 +47,10 @@ acessoete26_bd.sql
 2. Crie um banco de dados chamado:
 
 ```
-acessoete26
+ete_acesso26_bd
+```
+```
+utf8_general_ci
 ```
 
 3. Importe o arquivo:
@@ -60,35 +63,40 @@ acessoete26_bd.sql
 
 ## 🚀 Como Executar o Projeto
 
-### 1️⃣ Clonar o repositório
+### 0 Executar o Xampp:
+![Texto Alternativo](assets/img/readme/xamppControl.png)
 
+
+### 1 Localizar o diretório do projeto:
+```
+xampp/htdocs/
+```
+### 2 Abrir terminal:
+```
+no mouse usar botão direito e ("Git Bash Here") 
+```
+### 3 Clonar o repositório
 ```bash
 git clone https://github.com/dioramalho/eteAcesso2026.git
 ```
 
-### 2️⃣ Colocar no servidor local
+### 4 Acessar o diretório gerado 
+```
+xampp/htdocs/eteAcesso2026
+```
 
-Copie o projeto para a pasta do servidor.
-
-Exemplo usando **XAMPP**:
-
+### 5 Abrir com o vs-code 
 ```
 xampp/htdocs/eteAcesso2026
 ```
 ---
 
-### 3️⃣ Configurar o banco de dados
+### 6 Configurar o banco de dados
 
-Importe o arquivo:
-
-```
-acessoete26_bd.sql
-```
-
-Caso necessário, ajuste os dados de conexão no arquivo dentro da pasta:
+Ajuste os dados de conexão no arquivo dentro da pasta:
 
 ```
-configuracao/
+configuracao/conexao.php
 ```
 
 Exemplo:
@@ -97,7 +105,21 @@ Exemplo:
 $host = "localhost";
 $user = "root";
 $password = "";
-$db = "acessoete26";
+$db = "eteAcesso2026";
+```
+
+### 7 Configurar projeto local
+
+Ajuste os dados de conexão no arquivo dentro da pasta:
+
+```
+configuracao/configuracao.php
+```
+
+Exemplo:
+
+```php
+$enviroment['local'] = "http://localhost/eteAcesso2026/";
 ```
 
 ---
@@ -105,7 +127,7 @@ $db = "acessoete26";
 ### 4️⃣ Acessar no navegador
 
 ```
-http://localhost/eteAcesso2026/site
+http://localhost/eteAcesso2026/site/?pagina=acesso
 ```
 
 ---
