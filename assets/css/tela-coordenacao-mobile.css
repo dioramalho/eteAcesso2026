@@ -1,0 +1,30 @@
+@media (max-width: 576px) {
+    
+    .turmaAlunos {
+        margin-left: 0px;
+    }
+
+    .botao-mobile {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 7px;
+    }
+    
+    .paginacao-mobile {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: 2px;
+    }
+
+    .esconder-mobile {
+        display: none;
+    }
+
+    .diminuir-fonte-mobile {
+        font-size: x-small;
+    }
+
+}
