@@ -53,7 +53,7 @@
                     </div>
                     <div class="content">
                         <h2>Biometria</h2>
-                        <span>Cadastre o dedo <strong>Polegar</strong> , como destacado na imagem. <br> Após inserir o dedo no leitor, clique no botão <strong>Enviar</strong> para completar o cadastro.</span>
+                        <span>Cadastre um dedo de cada vez, siga a sequencia destacada na imagem. <br> Após inserir o dedo no leitor, clique no botão <strong>Enviar</strong> para completar o cadastro.</span>
                         <br>
                         <button class="botao" onclick="minhaFuncao()" style="float: none;">Inserir biometria</button>
                     </div>

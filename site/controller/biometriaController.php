@@ -16,7 +16,19 @@ $msgAlert = "";
 if ($biometria && @$idAluno) {
     $alunoObj = new Aluno(null, null, null);
     $alunoRetorno = $alunoObj->buscarPorId($idAluno);
-    $biometriaObj = Biometria::inserirBiometria01($idAluno, $biometria);
+
+
+    if ($alunoRetorno[0]["biometria01"]) {
+
+        $biometriaObj = Biometria::inserirBiometria02($idAluno, $biometria);
+
+
+    } elseif ($alunoRetorno[0]["biometria02"]) {
+        $biometriaObj = Biometria::inserirBiometria01($idAluno, $biometria);
+
+    } else {
+        $biometriaObj = Biometria::inserirBiometria01($idAluno, $biometria);
+    }
 }
 
 $alunoObj = new Aluno(null, null, null);

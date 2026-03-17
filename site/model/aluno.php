@@ -112,6 +112,7 @@ class Aluno
             return false;
             //$stmt->errorInfo();
         }
+
     }
 
     function verificacaoDeFrequencia($idAluno)
@@ -125,6 +126,7 @@ class Aluno
         $stmt->execute();
         $quantidadeAcesso = $stmt->fetchColumn();
         return $quantidadeAcesso > 0;
+
     }
     function listarPorFrequencia($idAluno)
     {
@@ -202,7 +204,7 @@ class Aluno
     public static function cadastrarAluno($matricula, $nome, $dataN, $sexo, $serie, $curso, $email, $telefone)
     {
         $sql = "INSERT INTO `aluno` (`Matricula`,`Nome`,`Data_Nasc`,`Sexo`,`Serie`,`Curso`,`email`,`Telefone`)
-        VALUES(:matricula,UPPER(:nome),:dataN,:sexo,:serie,:curso,:email,:telefone)";
+        VALUES(:matricula,:nome,:dataN,:sexo,:serie,:curso,:email,:telefone)";
 
         $pdo = Database::conexao();
         $stmt = $pdo->prepare($sql);
@@ -223,12 +225,10 @@ class Aluno
         }
     }
 
-    public static function deletarAluno($idAluno)
-    {
+    static public function deletaAluno($idAluno){
         $pdo = Database::conexao();
         $sql = "DELETE FROM `aluno` WHERE id = :idAluno";
         $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':idAluno', $idAluno);
         $result = $stmt->execute();
         if ($result) {
             return true;
@@ -237,10 +237,9 @@ class Aluno
         }
     }
 
-    static public function editarAlunoPorId($idAluno, $matricula, $nome, $dataN, $sexo, $serie, $curso, $email, $telefone)
-    {
+    static public function editarAlunoPorId($idAluno, $matricula, $nome, $dataN, $sexo, $serie, $curso, $email, $telefone){
         $pdo = Database::conexao();
-        $sql = "UPDATE aluno SET matricula = :matricula, nome = UPPER(:nome), email = :email, Data_Nasc = :dataN, sexo = :sexo, serie = :serie,
+        $sql = "UPDATE aluno SET matricula = :matricula, nome = :nome, email = :email, dataN = :dataN, sexo = :sexo, serie = :serie,
         curso = :curso, telefone = :telefone WHERE aluno.id = $idAluno";
         $stmt = $pdo->prepare($sql);
         $stmt->bindValue(':matricula', $matricula);
@@ -251,27 +250,6 @@ class Aluno
         $stmt->bindValue(':serie', $serie);
         $stmt->bindValue(':curso', $curso);
         $stmt->bindValue(':telefone', $telefone);
-        $result = $stmt->execute();
-
-        if ($result) {
-            return true;
-        } else {
-            return false;
-        }
+        return $result = $stmt->execute();
     }
-
-    public function dataFormatada($dataNasc) {
-
-        $reverter = explode('-', $dataNasc);
-        $impo = array_reverse($reverter);
-        return implode('/', $impo);
-    }
-
-    static public function dataFormatadaPadrao($data) {
-
-        $reverter = explode('/', $data);
-        $impo = array_reverse($reverter);
-        return implode('-', $impo);
-    }
-    
 }

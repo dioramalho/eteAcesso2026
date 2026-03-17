@@ -26,10 +26,10 @@
                         </text>
                         <circle class="meter" cx="50" cy="50" r="40" />
                     </svg>
-                    
+                    <a type="button" class="btn btn-outline-primary" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=lista-aluno">Cadastro Biometrico</a>
                 </div>
 
-                <div class="offset-1 col-sm-4 turmaAlunos">
+                <div class="offset-1 col-sm-4 ">
 
                     <div id="turmaAlunos">
                         <table id="tabela" class="table responsive-sm table table-borderless mb-4">
@@ -71,8 +71,8 @@
                                     if ($aluno["Curso"] === 'TDS' && $aluno["Serie"] === '3 Ano B') {
                                         $tds3b_contador++;
                                     }
-                                    $tds_total_contador = $tds1a_contador + $tds2a_contador + $tds3a_contador + $tds1b_contador + $tds2b_contador + $tds3b_contador;
-                                ?>
+                                    $tds_total_contador = $tds1a_contador + $tds2a_contador +$tds3a_contador + $tds1b_contador + $tds2b_contador +$tds3b_contador;
+                                    ?>
 
                                 <?php endforeach; ?>
                                 <tr>
@@ -84,7 +84,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><img src="<?= constant("URL_LOCAL_IMG") ?>tela/logo-tds.png" alt="Logo do Curso" class="imagem"></td>
+                                    <td><img src="<?= constant("URL_LOCAL_IMG") ?>tela/logo-tds.png" alt="Logo do Curso" class="imagem"></td>   
                                     <td>TDS</td>
                                     <td> 2 Ano A</td>
                                     <td>
@@ -92,7 +92,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><img src="<?= constant("URL_LOCAL_IMG") ?>tela/logo-tds.png" alt="Logo do Curso" class="imagem"></td>
+                                <td><img src="<?= constant("URL_LOCAL_IMG") ?>tela/logo-tds.png" alt="Logo do Curso" class="imagem"></td>
                                     <td>TDS</td>
                                     <td> 3 Ano A</td>
                                     <td>
@@ -124,7 +124,7 @@
                                         <?= $tds3b_contador ?>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr> 
                                     <th colspan="3">Total de Alunos TDS:</th>
                                     <td>
                                         <?= $tds_total_contador ?>
@@ -179,7 +179,7 @@
                                         $log3b_contador++;
                                     }
                                     $log_total_contador = $log1a_contador + $log2a_contador + $log3a_contador + $log1b_contador + $log2b_contador + $log3b_contador;
-                                ?>
+                                    ?>
 
                                 <?php endforeach; ?>
                                 <tr>
@@ -224,7 +224,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><img src="<?= constant("URL_LOCAL_IMG") ?>tela/logo-log.png" alt="Logo do Curso" class="imagem"></td>
+                                    <td><img src="<?= constant("URL_LOCAL_IMG") ?>tela/logo-log.png" alt="Logo do Curso" class="imagem"></td>   
                                     <td>LOG</td>
                                     <td> 3 Ano B</td>
                                     <td>
@@ -244,62 +244,53 @@
 
 
 
-            </div>
-            <div class="row">
-                    <div class="col-sm-6 botao-mobile" >
-                    <a type="button" class="btn btn-outline-primary" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=lista-aluno">Lista de Alunos</a>
+                <!-- Tabela que será gerada com as informações de quando o aluno entrar no sistema na entrada da escola  -->
+                <button id="botaoTurma" class=" mt-5 btn btn-outline-primary">Mostrar lista</button>
+                <div class="col-sm-12 " id="listaAlunos" style="display:none;">
+                    <h3>Lista de alunos</h3>
+                    <h5>Presentes até o momento.</h5>
+                    <div class="table-responsive-sm">
+
+                        <table class="table table-bordered">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Matrícula</th>
+                                    <th>Nome</th>
+                                    <th>Data</th>
+                                    <th>Dia da Semana</th>
+                                    <th>Horário de Entrada</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($listaAlunos as $aluno) : ?>
+                                    <tr>
+                                        <td>
+                                            <?= $aluno['Matricula'] ?>
+                                        </td>
+                                        <td>
+                                            <a href="<?= constant("URL_LOCAL_SITE") ?>?pagina=historico&idAluno=<?= $aluno['id'] ?>">
+                                                <?= $aluno['Nome'] ?>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <?= $aluno['acesso_data'] ?>
+                                        </td>
+                                        <td>
+                                            <?= $aluno['dia_semana'] ?>
+                                        </td>
+                                        <td>
+                                            <?= $aluno['acesso_hora'] ?>
+                                        </td>
+                                    </tr>
+                                <?php endforeach ?>
+                            </tbody>
+                        </table>
+
+                        
                     </div>
                 </div>
 
-            <!-- Tabela que será gerada com as informações de quando o aluno entrar no sistema na entrada da escola  -->
-            <div class="row">
-                <div class="col-sm-12 mb-2">
-                    <button id="botaoTurma" class=" mt-2 btn btn-outline-primary botaoTurma">Mostrar lista</button>
-                </div>
             </div>
-            
-            <div class="col-sm-12" id="listaAlunos" style="display:none;">
-                <h3>Lista de alunos</h3>
-                <h5>Presentes até o momento.</h5>
-                <div class="table-responsive-sm">
-
-                    <table class="table table-bordered">
-                        <thead class="table-dark">
-                            <tr>
-                                <th>Matrícula</th>
-                                <th>Nome</th>
-                                <th>Data</th>
-                                <th>Dia da Semana</th>
-                                <th>Horário de Entrada</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach ($listaAlunos as $aluno) : ?>
-                                <tr>
-                                    <td>
-                                        <?= $aluno['Matricula'] ?>
-                                    </td>
-                                    <td>
-                                        <a href="<?= constant("URL_LOCAL_SITE") ?>?pagina=historico&idAluno=<?= $aluno['id'] ?>">
-                                            <?= $aluno['Nome'] ?>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <?= $aluno['data_formatada'] = $data_acesso->format('d-m-Y') ?>
-                                    </td>
-                                    <td>
-                                        <?= $aluno['dia_semana'] ?>
-                                    </td>
-                                    <td>
-                                        <?= $aluno['acesso_hora'] ?>
-                                    </td>
-                                </tr>
-                            <?php endforeach ?>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
     </section>
 
     <div class="container">

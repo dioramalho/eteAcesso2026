@@ -39,7 +39,7 @@
                     <div class="mb-3 mt-3">
                         <h4>Seja bem vindo(a) <?=$alunoRetorno[0]['Nome']?></h4>
                         <span>Matricula: <?=$alunoRetorno[0]['Matricula']?></span><br/>
-                        <span>Data nascimento: <?= $dataFormatada ?></span><br/>
+                        <span>Data nascimento: <?=$alunoRetorno[0]['Data_Nasc']?></span><br/>
                         <span>Curso: <?=$alunoRetorno[0]['Curso']?></span>
                     </div>
                 <?php endif;//Exibir Sucesso?>

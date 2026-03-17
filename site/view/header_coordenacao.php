@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="<?= constant("URL_LOCAL_BASE")?>assets/css/check-animacao.css">
     <link rel="stylesheet" href="<?= constant("URL_LOCAL_BASE")?>assets/css/circulo-animacao.css">
     <link rel="stylesheet" href="<?= constant("URL_LOCAL_BASE")?>assets/css/tabelas.css">
-    <link rel="stylesheet" href="<?= constant("URL_LOCAL_BASE")?>assets/css/tela-coordenacao-mobile.css">
     
     <title>Acesso Inteligente ETE</title>
     <script>

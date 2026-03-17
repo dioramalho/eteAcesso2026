@@ -9,10 +9,6 @@
     <link rel="stylesheet" href="<?= constant("URL_LOCAL_BASE")?>assets/css/cabecalho-rodape.css">
     <link rel="stylesheet" href="<?= constant("URL_LOCAL_BASE")?>assets/css/check-animacao.css">
     <link rel="stylesheet" href="<?= constant("URL_LOCAL_BASE")?>assets/css/card-cadastro-biometrico.css">
-    <link rel="stylesheet" href="<?= constant("URL_LOCAL_BASE")?>assets/css/tela-responsavel-mobile.css">
-    <link rel="stylesheet" href="<?= constant("URL_LOCAL_BASE")?>assets/css/tela-coordenacao-mobile.css">
-    <link rel="stylesheet" href="<?= constant("URL_LOCAL_BASE")?>assets/css/geral.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.7-beta.15/inputmask.min.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Acesso Inteligente ETE</title>
 </head>

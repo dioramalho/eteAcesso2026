@@ -10,18 +10,12 @@
  * Informações estática da tela
  */
 $titulo = "Monitor de acessos";
-$msgAlert = !empty($_GET['msgAlert']) ? $_GET['msgAlert'] : null;
 
 //Criação de objetos
 $alunosObj = new Aluno(null, null, null);
 $hoje = date('Y-m-d');
 $listaAlunos = $alunosObj->listarPordata($hoje); 
 if($listaAlunos){
-    
-    foreach ($listaAlunos as $aluno) {
-        $data_acesso = new DateTime($aluno['acesso_data']);
-        $aluno = $data_acesso->format('d/m/Y');
-    }
     $totalAlunos = sizeof($listaAlunos);
 }else{
     $totalAlunos = 0;

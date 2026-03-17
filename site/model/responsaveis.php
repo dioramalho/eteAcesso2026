@@ -8,7 +8,7 @@ class Responsaveis {
     public $senha;
 
     //Construtor
-    public function __construct($nome=null, $email=null, $telefone=null, $senha=null){
+    public function __construct($nome, $email, $telefone, $senha){
         $this->nome = $nome;
         $this->email = $email;
         $this->telefone = $telefone;

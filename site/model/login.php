@@ -1,5 +1,4 @@
 <?php
-@include_once '../configuracao/conexao.php';
 class Login {
 
 public static function verificarAutenticacao($tipo){
@@ -42,20 +41,19 @@ public static function automatcLogout(){
     }
 }
 
-    public static function consultaIdAluno($idAluno, $senha)
-    {
-        $sql = "SELECT * FROM `responsavel` WHERE `idAluno` = :idAluno AND `senha` = :senha";
-        $pdo = Database::conexao();
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindValue(':idAluno', $idAluno);
-        $stmt->bindValue(':senha', $senha);
-        $result = $stmt->execute();
-        $result = $stmt->fetchAll(PDO::FETCH_COLUMN);
-        if ($result) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+public static function consultaIdAluno($senha){ 
+$sql = 'SELECT idAluno FROM `aluno` INNER JOIN `responsavel` ON aluno.id = responsavel.idAluno WHERE senha = :senha';
+$pdo = Database::conexao();
+$stmt = $pdo->prepare($sql);
+$stmt->bindValue(':senha', $senha);
+$result = $stmt->execute();
+$result= $stmt->fetchAll(PDO::FETCH_COLUMN);
+if($result)
+{
+    return $result[0];
+}else{
+    return false;
+}       
+}
 }
 ?>

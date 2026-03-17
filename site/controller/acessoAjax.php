@@ -17,14 +17,12 @@
                     if(data == 'OK'){
                         window.location.href = "<?= constant("URL_LOCAL_SITE")?>/controller/acessoLiberado.php?id=" + idAluno;
                     }else{alert('Biometria incorreta. Tente novamente.');
-                       
-                     window.location.href = "<?= constant("URL_LOCAL_SITE") ?>/?pagina=acesso&erro=Biometria%20incorreta";
+                    window.location.href = "<?= constant("URL_LOCAL_SITE") ?>/?pagina=acesso&erro=Biometria%20incorreta";
                 }
             },
             error: function(jqXHR, textStatus, errorThrown) {
-               
                 console.log('>> erro', textStatus, errorThrown);
-                alert('Aplicação da verificação da biometria não iniciado. Tente novamente.');
+                //alert('Aplicação da verificação da biometria não iniciado. Tente novamente.');
                 
             }
                 

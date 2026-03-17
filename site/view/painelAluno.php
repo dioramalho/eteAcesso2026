@@ -10,16 +10,16 @@
 
         <!-- Titulo de conteúdo da pagina. -->
         <div class="row">
-            <h1 class="text-center mt-2"><?= $titulo ?></h1>
+            <h1 class="text-center"><?= $titulo ?></h1>
         </div>
 
         <!-- Foto do aluno. -->
         <div class="container">
             <div class="row">
-                <div class="col-sm-4 d-flex justify-content-center">
-                    <?php if ($imagemAluno) : ?>
+                <div class="col-sm-3">
+                    <?php if ($alunoRetorno[0]['imagem']) : ?>
                         <figure class="figure">
-                            <img src="<?= constant("URL_LOCAL_FORMS") . $imagemAluno?>" class="figure-img img-fluid rounded flex-shrink-1 mt-3 " alt="imagem do aluno" style="width: 280px; height:270px;">
+                            <img src="<?= constant("URL_LOCAL_FORMS") . $alunoRetorno[0]['imagem'] ?>" class="figure-img img-fluid rounded flex-shrink-1 mt-3 " alt="imagem do aluno" style="width: 280px; height:270px;">
                         </figure>
                     <?php else : ?>
                         <img src="<?= constant("URL_LOCAL_FORMS") ?>upload/imagem-padrao.png" alt="Foto do aluno" class="mx-auto d-block img-fluid" style="width: 280px; height:270px;">
@@ -28,7 +28,7 @@
 
 
                 <!-- Tabela com informações do aluno. -->
-                <div class=" col-sm-6 flex-shrink-1 ">
+                <div class="offset-1 col-sm-4 flex-shrink-1 ">
                     <table class="table responsive-sm table table-borderless">
                         <thead>
                             <tr>
@@ -67,7 +67,7 @@
                         <tr>
                             <td><?= $alunoRetorno[0]["Matricula"] ?></td>
                             <td><?= $alunoRetorno[0]["Nome"] ?></td>
-                            <td><?= $dataFormatada ?></td>
+                            <td><?= $alunoRetorno[0]["acesso_data"] ?></td>
                             <td><?= $alunoRetorno[0]["dia_semana"] ?></td>
                             <td><?= $alunoRetorno[0]["acesso_hora"] ?></td>
                         </tr>
@@ -76,7 +76,7 @@
             </div>
 
             <!-- Botão de redirecionamento para do histórico completo. -->
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end m-3">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end m-2">
                 <a href="<?= constant("URL_LOCAL_SITE") ?>?pagina=historico&idAluno=<?= $idAluno ?>" class="btn btn-outline-primary">Historico de presença</a>
             </div>
         </div>

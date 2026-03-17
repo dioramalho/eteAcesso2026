@@ -1,58 +1,15 @@
-<?php if (@$msgAlert) : ?>
-    <script>
-        setTimeout(alertFunc, 2000);
 
+
+<?php if(@$msgAlert):?> 
+    <script>
+       setTimeout(alertFunc, 2000);
         function alertFunc() {
-            alert('ATENÇÂO: <?= @$msgAlert ?>');
+            alert('ATENÇÂO: <?=@$msgAlert?>');  
         }
     </script>
-<?php endif; ?>
+<?php endif;?> 
 
-<script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const nome = document.getElementById('Nome');
-        const telefone = document.getElementById('Telefone');
-        const matricula = document.getElementById('Matricula');
-
-        const nomeRegex = /^[A-Za-z\s]*$/;
-        const telefoneRegex = /^\d{0,2}\s?\(?\d{0,2}\)?\s?\d{0,1}-?\d{0,4}-?\d{0,4}$/;
-        const matriculaRegex = /^\d*$/;
-
-        nome.addEventListener('input', function(e) {
-            if (!nomeRegex.test(nome.value)) {
-                nome.value = nome.value.slice(0, -1);
-            }
-        });
-
-        telefone.addEventListener('input', function(e) {
-            if (!telefoneRegex.test(telefone.value)) {
-                telefone.value = telefone.value.slice(0, -1);
-            }
-        });
-
-        matricula.addEventListener('input', function(e) {
-            if (!matriculaRegex.test(matricula.value)) {
-                matricula.value = matricula.value.slice(0, -1);
-            }
-        });
-    });
-
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const telefone = document.getElementById('Telefone');
-
-        telefone.addEventListener('input', function(e) {
-            let caracteres = telefone.value.replace(/\D/g, ''); // Remove todos os caracteres que não são dígitos
-            caracteres = caracteres.replace(/^(\d{2})(\d)/g, '($1) $2'); // Adiciona parênteses em torno dos dois primeiros dígitos
-            caracteres = caracteres.replace(/(\d{5})(\d{4})$/, '$1-$2'); // Adiciona um hífen antes dos últimos quatro dígitos
-            telefone.value = caracteres;
-        });
-    });
-</script>
-
-<script>
-    
-</script>
-<!-- <script>
+    <!-- <script>
         $(document).ready(function(){
             var digital = "<?php print $digital; ?>"; 
            
@@ -81,5 +38,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
 </script>
 </body>
-
 </html>

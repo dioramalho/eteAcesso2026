@@ -37,10 +37,11 @@ if ($matricula) {
     // $alunoRetorno = $alunoObj->buscarPorMatricula($matricula);
     $alunoRetorno = $alunoObj->buscarPorId($matricula);
 
-    
     if ($alunoRetorno) {
         $acessoHoje = $alunoObj->verificacaoDeFrequencia($alunoRetorno[0]['id']);
+
         if ($acessoHoje) {
+
             @$exibirFormulario = true;
             $msgAlert = ' você já fez o acesso hoje';
             include_once '../view/header.php';

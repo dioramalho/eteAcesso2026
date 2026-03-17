@@ -1,4 +1,12 @@
+<?php if (@$msgAlert) : ?>
+    <script>
+        setTimeout(alertFunc, 2000);
 
+        function alertFunc() {
+            alert('ATENÇÂO: <?= @$msgAlert ?>');
+        }
+    </script>
+<?php endif; ?>
 
 <!-- Cabeçalho -->
 <div class="container">
@@ -14,7 +22,7 @@
         <!-- Titulo de conteúdo da pagina -->
         <div class="container mt-4 ">
             <div class="row">
-                <div class="col-sm-1 ms-2 mb-2"><a class="btn btn-outline-primary" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=secretaria" class="btn btn-primary mt-4">Voltar</a></div>
+                <div class="col-1" style="padding-left: 20px;"><a class="btn btn-outline-primary" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=secretaria" class="btn btn-primary mt-4">Voltar</a></div>
                 <div class="col">
                     <h2 style="text-align: center;padding-left: 0px;padding-right: 80px">
                         <?= $titulo ?>
@@ -27,12 +35,6 @@
                 <table class="table table-bordered">
                     <div class="Barra_De_Pesquisa">
                         <div class="col-md-4">
-                            <span class="col-sm-6 botao-mobile">
-                                <br>
-                                <a type="button" class="btn btn-outline-primary me-2" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=cadastro-aluno">Cadastrar Alunos</a>
-                                <br>
-                                <br>
-                            </span>
                             <form action="<?= constant("URL_LOCAL_FORMS") ?>listaAlunoController.php" method="post">
                                 <div class="input-group">
                                     <input type="text" class="form-control" name="termo" placeholder="Digite sua pesquisa">
@@ -44,20 +46,18 @@
                     </div>
                     <div id="datatable">
                     </div>
-                    <thead class="table-dark diminuir-fonte-mobile">
+                    <thead class="table-dark">
                         <tr>
                             <th>Id</th>
                             <th>Matrícula</th>
                             <th>Nome</th>
                             <th>Turma</th>
                             <th>Curso</th>
-                            <th class="esconder-mobile">Cadastro</th>
-                            <th class="esconder-mobile">Foto Aluno</th>
-                            <th class="esconder-mobile">Responsavel</th>
-                            <th class="esconder-mobile">Ações</th>
+                            <th>Cadastro</th>
+                            <th>Foto Aluno</th>
                         </tr>
                     </thead>
-                    <tbody class="diminuir-fonte-mobile">
+                    <tbody>
                         <?php
                         foreach ($alunoRetorno as $aluno) : ?>
                             <tr>
@@ -68,7 +68,7 @@
                                     <?= $aluno['Matricula'] ?>
                                 </td>
                                 <td>
-                                    <a type="button" title="Editar Aluno" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=edicao-aluno&IdAluno=<?= $aluno['id']?>"><?= $aluno['Nome']?></a>
+                                    <?= $aluno['Nome'] ?>
                                 </td>
                                 <td>
                                     <?= $aluno['Serie'] ?>
@@ -76,35 +76,23 @@
                                 <td>
                                     <?= $aluno['Curso'] ?>
                                 </td>
-                                <?php if ($aluno['biometria01']) : ?>
-                                    <td class="esconder-mobile"><a href="<?= constant("URL_LOCAL_SITE") ?>?pagina=biometria&idAluno=<?= $aluno['id'] ?>" class="btn btn-outline-success">Biometria</a></td>
-                                <?php else : ?>
-                                    <td class="esconder-mobile"><a href="<?= constant("URL_LOCAL_SITE") ?>?pagina=biometria&idAluno=<?= $aluno['id'] ?>" class="btn btn-outline-danger">Biometria</a></td>
-                                <?php endif ?>
 
-                                <td class="esconder-mobile">
-                                    <?php if ($aluno['imagem']) : ?>
+                                <td><a href="<?= constant("URL_LOCAL_SITE") ?>?pagina=biometria&idAluno=<?= $aluno['id'] ?>" class="btn btn-outline-primary">Biometria</a></td>
+
+                                <td>
+                                    <?php if($aluno['imagem']):?>
                                         <?= 'imagem já existe' ?>
-                                    <?php else : ?>
-                                        <form action="<?= constant("URL_LOCAL_FORMS") ?>listaAlunoController.php" method="post" enctype="multipart/form-data">
-                                            <div class="input-group">
-                                                <input type="file" class="form-control" name="imagem" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" required="required">
-                                                <input type="hidden" name="aluno_id" value="<?= $aluno['id'] ?>">
-                                                <button class="btn btn-outline-primary" name="submit" type="submit" id="inputGroupFileAddon04">Enviar</button>
-                                            </div>
-                                        </form>
-                                    <?php endif; ?>
+                                        <?php else:?>
+                                            <form action="<?= constant("URL_LOCAL_FORMS") ?>listaAlunoController.php" method="post" enctype="multipart/form-data">
+                                                <div class="input-group">
+                                                    <input type="file" class="form-control" name="imagem" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" required="required">
+                                                    <input type="hidden" name="aluno_id" value="<?= $aluno['id'] ?>">
+                                                    <button class="btn btn-outline-primary" name="submit" type="submit" id="inputGroupFileAddon04">Enviar</button>
+                                                </div>
+                                            </form>
+                                    <?php endif;?>
                                 </td>
-
-                                <td class="esconder-mobile">
-                                    <a href="<?= constant("URL_LOCAL_SITE") ?>?pagina=login-responsavel&idAluno=<?= $aluno['id'] ?>" class="btn btn-outline-primary">Responsavel</a>
-                                </td>
-                                <td class="esconder-mobile">
-                                    <!-- <a type="button" class="btn btn-outline-primary botao-editar-deletar" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=edicao-aluno">Editar</a> -->
-                                    <a type="button" class="btn btn-danger botao-editar-deletar" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=deletar-aluno&idAluno=<?= $aluno['id'] ?>">Deletar</a>
-                                </td>
-
-
+                                    
 
                             </tr>
                         <?php endforeach ?>
@@ -116,20 +104,20 @@
                 if ($exibir_paginacao) :
 
                 ?>
-                    <ul class="pagination justify-content-center paginacao-mobile">
-                        <li class="page-item paginacao-mobile"><a class="btn btn-outline-primary" class="page-link" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=lista-aluno&page=<?= $page - 1; ?>">Anterior</a>
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item"><a class="btn btn-outline-primary" class="page-link" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=lista-aluno&page=<?= $page - 1; ?>">Anterior</a>
                         </li>
                         <?php
                         $listatotal = (count($listaAlunos) / $limit) + 1;
 
                         for ($i = 1; $i <= $listatotal; $i++) : ?>
 
-                            <li class="page-item paginacao-mobile"><a class="btn btn-outline-primary" class="page-link" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=lista-aluno&page=<?= $i; ?>">
+                            <li class="page-item"><a class="btn btn-outline-primary" class="page-link" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=lista-aluno&page=<?= $i; ?>">
                                     <?= $i; ?>
                                 </a></li>
 
                         <?php endfor; ?>
-                        <li class="page-item paginacao-mobile"><a class="btn btn-outline-primary" class="page-link" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=lista-aluno&page=<?= $page + 1; ?>">Proximo</a>
+                        <li class="page-item"><a class="btn btn-outline-primary" class="page-link" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=lista-aluno&page=<?= $page + 1; ?>">Proximo</a>
                         </li>
                     </ul>
                 <?php

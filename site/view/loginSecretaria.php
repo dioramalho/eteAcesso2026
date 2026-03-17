@@ -43,7 +43,7 @@ $exibir_alerta = false
                             <div class="invalid-feedback">Por favor, preencha este campo.</div>
                         </div>
                         <input type="hidden" name="tipo" value="secretaria">
-                        <button type="submit" class="btn btn-primary mb-2 botaoLogin">Entrar</button>
+                        <button type="submit" class="btn btn-primary mb-2 ">Entrar</button>
                     </form>
                 <?php endif; //Exibir formularios
                 ?>

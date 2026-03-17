@@ -22,12 +22,6 @@ $alunoObj = new Aluno(null, null, null);
  if(@$paginaUrl){
    $exibirFormulario = true;
    $alunoRetorno = $alunoObj->listarPorFrequencia($idAluno);
-
-   if($alunoRetorno) {
-    $dataNasc = $alunoRetorno[0]['Data_Nasc'];
-    $dataFormatada = $alunoObj->dataFormatada($dataNasc);
-  }
-
    @include_once './view/header.php';
    @include_once './view/historicoAluno.php';
    @include_once './view/footer.php';

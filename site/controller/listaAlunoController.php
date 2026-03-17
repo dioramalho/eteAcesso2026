@@ -12,7 +12,6 @@ $idAluno = true;
 $limit = 20;
 $msgAlert = "";
 $exibir_paginacao = true;
-$msgAlert = ($_SERVER["REQUEST_METHOD"] == "GET" && !empty($_GET['msgAlert'])) ? $_GET['msgAlert'] : null;
 
 if (@!$page) {
   $page = 1;

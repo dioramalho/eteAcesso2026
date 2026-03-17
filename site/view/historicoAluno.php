@@ -11,11 +11,11 @@
 
     <section>
         <!-- Titulo de conteúdo da pagina -->
-        <div class="container mt-2 ">
+        <div class="container mt-4 ">
             <div class="row">
-                <div class="col-sm-1 mb-2"><button class="btn btn-outline-primary" id="botaoVoltar">Voltar</button></div>
-                <div class="col-sm-11 mt-2">
-                    <h2 style="text-align: center;">
+                <div class="col-1" style="padding-left: 20px;"><button class="btn btn-outline-primary" id="botaoVoltar">Voltar</button></div>
+                <div class="col">
+                    <h2 style="text-align: center;padding-left: 0px;padding-right: 70px">
                         <?= $titulo ?>
                     </h2>
                 </div>
@@ -24,7 +24,7 @@
 
 
             <!-- Tabela com o histórico completo do aluno que será gerada de acordo com acesso ao sistema  -->
-            <div class="table-responsive-sm m-3">
+            <div class="table-responsive-sm m-2">
 
                 <table class="table table-bordered">
                     <thead class="table-dark">
@@ -46,7 +46,7 @@
                                     <?= $aluno['Nome'] ?>
                                 </td>
                                 <td>
-                                    <?= $dataFormatada ?>
+                                    <?= $aluno['acesso_data'] ?>
                                 </td>
                                 <td>
                                     <?= $aluno['dia_semana'] ?>

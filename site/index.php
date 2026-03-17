@@ -76,20 +76,17 @@ if ($paginaUrl === 'acesso') {
     include_once './model/aluno.php';
     include_once './model/biometria.php';
     include_once './controller/biometriaController.php';
-
-}elseif ($paginaUrl === 'cadastro-aluno'){
+}elseif ($paginaUrl === 'cadastro'){
     include_once './model/aluno.php';
-    include_once './controller/cadastroAlunoController.php';
+    include_once './controller/formularioCadastro.php';
 
-}elseif($paginaUrl === 'edicao-aluno'){
-    include_once './model/aluno.php';
-    include_once './controller/edicaoAlunoController.php';
-
-}elseif($paginaUrl === 'deletar-aluno'){
-    include_once './model/aluno.php';
-    include_once './controller/deletarAlunoController.php';
-
-}else{
+}elseif ($paginaUrl === 'formulario-cadastro'){
+    include_once './view/header.php';
+    include_once './view/formularioCadastroAluno.php';
+    include_once './view/footer.php';
+    
+}
+else{
     include_once './view/header.php';
     include_once './view/paginaNaoLocalizada.php';
     include_once './view/footer.php';

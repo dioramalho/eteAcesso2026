@@ -22,22 +22,23 @@ $exibir_alerta = false
     <section>
         <!-- Titulo de conteúdo da pagina -->
         <div class="row">
-            <h1 class="mt-3 text-center"><?=$titulo?></h1>
+            <h1 class="text-center"><?=$titulo?></h1>
         </div>
 
         <!-- Formulário de acesso com condicional para validação -->
         <div class="row">
             <div class="col-sm-6">
                 <?php if ($exibirFormulario) : ?>
-                    <form action="#" method="post" class="was-validated">
+                    <form action="<?=constant("URL_LOCAL_FORMS")?>loginControllerResponsaveis.php" method="post" class="was-validated">
+                        
                         <div class="mb-3">
                             <label for="pwd" class="form-label">Senha:</label>
                             <input type="password" class="form-control" id="pwd" placeholder="Insira a data de nascimento do aluno" name="senha" required>
                             <div class="valid-feedback">Preenchido.</div>
                             <div class="invalid-feedback">Por favor, preencha este campo.</div>
                         </div>
-                        <input type="hidden" name="idAluno" value="<?=$idAluno?>">
-                        <input type="hidden" name="tipo" value="login-responsavel">
+                        <!-- <input type="hidden" name="idAluno" value="<?=@$idAluno?>"> -->
+                        <input type="hidden" name="tipo" value="responsavel">
                         <button type="submit" class="btn btn-primary mb-2 ">Entrar</button>
                     </form>
                 <?php endif; //Exibir formularios
@@ -47,8 +48,8 @@ $exibir_alerta = false
 
                 <!-- Imagem do com uma logo do Acesso Inteligente -->
             </div>
-            <div class="offset-1 col-sm-5 mb-2 " id="imgLogo">
-                <img src="<?= constant("URL_LOCAL_IMG") ?>tela/logo_acesso.png" alt="Logo do Acesso Inteligente" class="pb-3 flex-shrink-1 bd-highlight img-fluid ">
+            <div class="offset-1 col-sm-5 mb-2 ">
+                <img src="<?= constant("URL_LOCAL_IMG") ?>tela/logo_acesso.png" alt="Logo do Acesso Inteligente" class="pt-2 mt-3 flex-shrink-1 bd-highlight img-fluid ">
             </div>
     </section>
 
