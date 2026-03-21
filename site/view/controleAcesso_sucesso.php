@@ -35,7 +35,7 @@
                         <span style="padding: 10px;">Matricula: <?= $alunoRetorno[0]['Matricula'] ?></span><br />
                         <span style="padding: 10px;">Curso: <?= $alunoRetorno[0]['Curso'] ?></span><br />
                         <span style="padding: 10px;">Serie: <?= $alunoRetorno[0]['Serie'] ?></span>
-                        <!-- Barra de Refresh da tela  -->
+                        <!-- Barra de  da tela  -->
                         <div>
                             <div id="progressBarContainer">
                                 <div id="progressBar"></div>

@@ -29,8 +29,127 @@
                     
                 </div>
 
-                <div class="offset-1 col-sm-4 turmaAlunos">
+                <div class="col-sm-4 mb-3">
+                        <label><strong>Selecione o Curso:</strong></label>
+                    <select id="selectCurso" class="form-control">
+                        <option value="">-- Escolha --</option>
+                        <option value="ADM">ADM</option>
+                        <option value="TDS">TDS</option>
+                        <option value="LOG">LOG</option>
+                    </select>
+                </div>
+                    <div class="col-sm-12 text-center">
+                        <div id="ADM" class="turmaAlunos" style="display:none;">
+                    <div id="turmaAlunos">
+                        <table id="tabela" class="table responsive-sm table table-borderless mb-4">
+                            <table class="table table-borderless mx-auto text-center">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Curso</th>
+                                    <th>Turma</th>
+                                    <th>SubTotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                $adm1a_contador = 0;
+                                $adm1b_contador = 0;
 
+                                $adm2a_contador = 0;
+                                $adm2b_contador = 0;
+
+                                $adm3a_contador = 0;
+                                $adm3b_contador = 0;
+                                foreach ($listaAlunos as $aluno) :
+                                    if ($aluno["Curso"] === 'ADM' && $aluno["Serie"] === '1 Ano A') {
+                                        $adm1a_contador++;
+                                    }
+                                    if ($aluno["Curso"] === 'ADM' && $aluno["Serie"] === '2 Ano A') {
+                                        $adm2a_contador++;
+                                    }
+
+                                    if ($aluno["Curso"] === 'ADM' && $aluno["Serie"] === '3 Ano A') {
+                                        $adm3a_contador++;
+                                    }
+                                    if ($aluno["Curso"] === 'ADM' && $aluno["Serie"] === '1 Ano B') {
+                                        $adm1b_contador++;
+                                    }
+                                    if ($aluno["Curso"] === 'ADM' && $aluno["Serie"] === '2 Ano B') {
+                                        $adm2b_contador++;
+                                    }
+                                    if ($aluno["Curso"] === 'ADM' && $aluno["Serie"] === '3 Ano B') {
+                                        $adm3b_contador++;
+                                    }
+                                    $adm_total_contador = $adm1a_contador + $adm2a_contador + $adm3a_contador + $adm1b_contador + $adm2b_contador + $adm3b_contador;
+                                ?>
+
+                                <?php endforeach; ?>
+                                <tr>
+                                    <img src="..." class="imagem mx-auto d-block">
+                                    <td><img src="<?= constant("URL_LOCAL_IMG") ?>tela/mda.png" alt="Logo do Curso" class="imagem"></td>
+                                    <td>ADM</td>
+                                    <td> 1 Ano A</td>
+                                    <td>
+                                        <?= $adm1a_contador ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="<?= constant("URL_LOCAL_IMG") ?>tela/mda.png" alt="Logo do Curso" class="imagem"></td>
+                                    <td>ADM</td>
+                                    <td> 2 Ano A</td>
+                                    <td>
+                                        <?= $adm2a_contador ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="<?= constant("URL_LOCAL_IMG") ?>tela/mda.png" alt="Logo do Curso" class="imagem"></td>
+                                    <td>ADM</td>
+                                    <td> 3 Ano A</td>
+                                    <td>
+                                        <?= $adm3a_contador ?>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><img src="<?= constant("URL_LOCAL_IMG") ?>tela/mda.png" alt="Logo do Curso" class="imagem"></td>
+                                    <td>ADM</td>
+                                    <td> 1 Ano B</td>
+                                    <td>
+                                        <?= $adm1b_contador ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="<?= constant("URL_LOCAL_IMG") ?>tela/mda.png" alt="Logo do Curso" class="imagem"></td>
+                                    <td>ADM</td>
+                                    <td> 2 Ano B</td>
+                                    <td>
+                                        <?= $adm2b_contador ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="<?= constant("URL_LOCAL_IMG") ?>tela/mda.png" alt="Logo do Curso" class="imagem"></td>
+                                    <td>ADM</td>
+                                    <td> 3 Ano B</td>
+                                    <td>
+                                        <?= $adm3b_contador ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="3">Total de Alunos TDS:</th>
+                                    <td>
+                                        <?= $adm_total_contador ?>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+
+                <div class="col-sm-12 text-center">
+                        <div id="TDS" class="turmaAlunos" style="display:none;">                   
                     <div id="turmaAlunos">
                         <table id="tabela" class="table responsive-sm table table-borderless mb-4">
                             <thead>
@@ -136,7 +255,8 @@
 
                 </div>
 
-                <div class="col-sm-4">
+                <div class="col-sm-12 text-center">
+                        <div id="LOG" class="turmaAlunos" style="display:none;">
                     <div id="turmaAlunos">
                         <table id="tabela" class="table responsive-sm table table-borderless">
                             <thead>
@@ -332,6 +452,33 @@
         } else {
             // Se o conteúdo estiver visível, oculte-o
             listaAlunos.style.display = "none";
+        }
+    });
+    
+</script>
+<script>
+    var select = document.getElementById("selectCurso");
+
+    var adm = document.getElementById("ADM");
+    var tds = document.getElementById("TDS");
+    var log = document.getElementById("LOG");
+
+    select.addEventListener("change", function () {
+
+        // Esconde tudo primeiro
+        adm.style.display = "none";
+        tds.style.display = "none";
+        log.style.display = "none";
+
+        // Mostra o selecionado
+        if (this.value === "ADM") {
+            adm.style.display = "block";
+        }
+        if (this.value === "TDS") {
+            tds.style.display = "block";
+        }
+        if (this.value === "LOG") {
+            log.style.display = "block";
         }
     });
 </script>
