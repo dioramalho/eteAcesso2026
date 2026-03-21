@@ -92,8 +92,9 @@ if(@$paginaUrl && $usuarioLogado){
     <?php foreach($cursos as $curso => $logo): ?>
         <div class="row mb-4">
             <?php foreach($turmas as $turma): ?>
-                <div class="col-sm-4 mb-3">
-                    <div class="card shadow p-3 text-center">
+
+                <div class="col-sm-2 mb-3">
+                        <div class="card shadow p-3 text-center">
                         <img src="<?= constant("URL_LOCAL_IMG") ?>tela/<?= $logo ?>" class="img-fluid mb-2">
                         <h5><?= $curso ?> - <?= $turma ?></h5>
                         <h2><?= $contadores[$curso][$turma] ?? 0 ?></h2>
