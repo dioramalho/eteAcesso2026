@@ -12,11 +12,5 @@
     <link rel="stylesheet" href="<?= constant("URL_LOCAL_BASE")?>assets/css/tabelas.css">
     <link rel="stylesheet" href="<?= constant("URL_LOCAL_BASE")?>assets/css/tela-coordenacao-mobile.css">
     
-    <title>Acesso Inteligente ETE</title>
-    <!--<script>
-        setTimeout(function() {
-        location.reload();
-        }, 10000);
-    </script>-->
-</head>
+
 <body>
