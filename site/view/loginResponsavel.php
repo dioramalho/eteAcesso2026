@@ -1,7 +1,5 @@
 <!-- Declaração de variável pra alerta -->
-<?php
-$exibir_alerta = false
-?>
+
 <!-- Cabeçalho -->
 <div class="container">
     <div class="row">
@@ -29,16 +27,25 @@ $exibir_alerta = false
         <div class="row">
             <div class="col-sm-6">
                 <?php if ($exibirFormulario) : ?>
-                    <form action="#" method="post" class="was-validated">
+
+<form method="POST" action="index.php?pagina=login-responsavel">
                         <div class="mb-3">
                             <label for="pwd" class="form-label">Senha:</label>
-                            <input type="password" class="form-control" id="pwd" placeholder="Insira a data de nascimento do aluno" name="senha" required>
-                            <div class="valid-feedback">Preenchido.</div>
-                            <div class="invalid-feedback">Por favor, preencha este campo.</div>
+                            <input type="password" class="form-control" id="pwd" 
+                                placeholder="Digite a senha" 
+                                name="senha" required>
                         </div>
+
                         <input type="hidden" name="idAluno" value="<?=$idAluno?>">
                         <input type="hidden" name="tipo" value="login-responsavel">
-                        <button type="submit" class="btn btn-primary mb-2 ">Entrar</button>
+
+                        <button type="submit" class="btn btn-primary mb-2 w-100">Entrar</button>
+
+                        <!-- BOTÃO CADASTRO -->
+                        <a href="index.php?pagina=responsavel-cadastro" class="btn btn-success w-100">
+                            Cadastrar
+                        </a>
+
                     </form>
                 <?php endif; //Exibir formularios
                 ?>

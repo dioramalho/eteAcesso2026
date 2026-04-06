@@ -89,7 +89,31 @@ if ($paginaUrl === 'acesso') {
     include_once './model/aluno.php';
     include_once './controller/deletarAlunoController.php';
 
-}else{
+}
+// LISTA DE RESPONSÁVEIS
+elseif ($paginaUrl === 'responsavel-lista') {
+    include_once __DIR__ . '/model/Responsaveis.php';
+    include_once __DIR__ . '/view/header.php';
+    include_once __DIR__ . '/view/listaResponsavel.php';
+    include_once __DIR__ . '/view/footer.php';
+}
+
+// CADASTRO DE RESPONSÁVEL
+elseif ($paginaUrl === 'responsavel-cadastro') {
+    include_once __DIR__ . '/model/Responsaveis.php';
+    include_once __DIR__ . '/view/header.php';
+    include_once __DIR__ . '/view/cadastroResponsavel.php';
+    include_once __DIR__ . '/view/footer.php';
+}
+
+// EDIÇÃO DE RESPONSÁVEL
+elseif ($paginaUrl === 'responsavel-editar') {
+    include_once __DIR__ . '/model/Responsaveis.php';
+    include_once __DIR__ . '/view/header.php';
+    include_once __DIR__ . '/view/editarResponsavel.php';
+    include_once __DIR__ . '/view/footer.php';
+}
+else{
     include_once './view/header.php';
     include_once './view/paginaNaoLocalizada.php';
     include_once './view/footer.php';

@@ -1,36 +1,98 @@
 <?php
-include_once '../configuracao/conexao.php';
+require_once __DIR__ . '/../../configuracao/conexao.php';
+
 class Responsaveis {
-    //atributos
+
+    public $id;
     public $nome;
     public $email;
     public $telefone;
     public $senha;
+    public $idAluno;
 
-    //Construtor
-    public function __construct($nome=null, $email=null, $telefone=null, $senha=null){
+    public function __construct($nome=null, $email=null, $telefone=null, $senha=null, $idAluno=null){
         $this->nome = $nome;
         $this->email = $email;
         $this->telefone = $telefone;
         $this->senha = $senha;
+        $this->idAluno = $idAluno;
     }
 
-    function buscarPorId($idAluno){
+    // CREATE
+    public function cadastrar(){
         $pdo = Database::conexao();
-        $sql = "SELECT * FROM responsavel WHERE idAluno = $idAluno";
+
+        $sql = "INSERT INTO responsavel (nome, email, telefone, senha, idAluno)
+                VALUES (:nome, :email, :telefone, :senha, :idAluno)";
+
         $stmt = $pdo->prepare($sql);
-        $list = $stmt->execute();
-        $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $list;
+        $stmt->bindParam(':nome', $this->nome);
+        $stmt->bindParam(':email', $this->email);
+        $stmt->bindParam(':telefone', $this->telefone);
+        $stmt->bindParam(':senha', $this->senha);
+        $stmt->bindParam(':idAluno', $this->idAluno);
+
+        return $stmt->execute();
     }
 
-    function buscarPorMatricula($mat){
+    // READ
+    public function listar(){
         $pdo = Database::conexao();
-        $sql = "SELECT * FROM responsaveis WHERE matricula = $mat";
-        $stmt = $pdo->prepare($sql);
-        $list = $stmt->execute();
-        $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $list;
+        return $pdo->query("SELECT * FROM responsavel")->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // BUSCAR POR ID
+    public function buscar($id){
+        $pdo = Database::conexao();
+
+        $sql = "SELECT * FROM responsavel WHERE id = :id";
+
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    // UPDATE
+    public function atualizar($id){
+        $pdo = Database::conexao();
+
+        $sql = "UPDATE responsavel 
+                SET nome = :nome, email = :email, telefone = :telefone
+                WHERE id = :id";
+
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':nome', $this->nome);
+        $stmt->bindParam(':email', $this->email);
+        $stmt->bindParam(':telefone', $this->telefone);
+        $stmt->bindParam(':id', $id);
+
+        return $stmt->execute();
+    }
+
+    // DELETE
+    public function deletar($id){
+        $pdo = Database::conexao();
+
+        $sql = "DELETE FROM responsavel WHERE id = :id";
+
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':id', $id);
+
+        return $stmt->execute();
+    }
+
+    // BUSCAR POR ID DO ALUNO
+    public function buscarPorId($idAluno){
+        $pdo = Database::conexao();
+
+        $sql = "SELECT * FROM responsavel WHERE idAluno = :idAluno";
+
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':idAluno', $idAluno);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

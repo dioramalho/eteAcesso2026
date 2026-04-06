@@ -14,9 +14,11 @@
     
     <title>Acesso Inteligente ETE</title>
     <script>
-        setTimeout(function() {
-        location.reload();
-        }, 10000);
+        if(window.location.search.index0f('pagina=login-responsavel')!== -1){
+            setTimeout(function() {
+            location.reload();
+            }, 10000);
+        }
     </script>
 </head>
 <body>

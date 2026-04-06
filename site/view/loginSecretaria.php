@@ -1,6 +1,6 @@
 <!-- Declaração de variável pra alerta -->
 <?php
-$exibir_alerta = false
+$exibir_alerta = false;
 ?>
 <!-- Cabeçalho -->
 <div class="container">

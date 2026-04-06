@@ -32,6 +32,25 @@ public static function validarSenhaResponsavel($idAluno, $senha){
     return ($result)?$result:false;
 }
 
+//validarSenhaResponsavel
+
+public static function validarSenhaResponsavel($idAluno, $senha) {
+    $pdo = Database::conexao();
+
+    $sql = "SELECT senha FROM responsavel WHERE idAluno = :idAluno LIMIT 1";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':idAluno', $idAluno);
+    $stmt->execute();
+
+    $dados = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($dados && password_verify($senha, $dados['senha'])) {
+        return true;
+    }
+
+    return false;
+}
+
 public static function automatcLogout(){
     if($_SESSION['timestamp'] && $_SESSION['usuario'])
     if(time() - $_SESSION['timestamp'] > 225) { 

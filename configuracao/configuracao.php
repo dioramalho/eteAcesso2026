@@ -13,6 +13,7 @@ $enviroment['prod'] = "https://diogoramalho.com.br/ete/aie/";
  * Definindo constante URL_LOCAL
  * Caminho absoluto
  */
+define('URL_BASE', 'http://localhost/eteAcesso2026/');
 define("URL_LOCAL_BASE",$enviroment['local']);
 define("URL_LOCAL_IMG",constant("URL_LOCAL_BASE")."assets/img/");
 define("URL_LOCAL_SITE",constant("URL_LOCAL_BASE")."site/");

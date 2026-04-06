@@ -1,34 +1,41 @@
 <?php
-@include_once '../../configuracao/configuracao.php';
-@include_once '../../configuracao/conexao.php';
-@include_once '../model/aluno.php';
-@include_once './model/aluno.php';
-@include_once './model/login.php';
-@include_once '../model/login.php';
-@include_once '../controller/loginControllerResponsaveis.php';
+require_once __DIR__ . '/../model/Responsaveis.php';
+require_once __DIR__ . '/../../configuracao/configuracao.php';
 
-@$idAluno = ($_SERVER["REQUEST_METHOD"] == "GET" && !empty($_GET['idAluno'])) ? $_GET['idAluno'] : null;
-if (!$_SESSION["usuario"]["idAluno"] == $idAluno && !$_SESSION["usuario"]["logado"] == true) {
-    header('LOCATION:'.constant('URL_LOCAL_SITE')."?pagina=login-responsavel&idAluno=$idAluno");
+$responsavel = new Responsaveis();
+
+$acao = $_POST['acao'] ?? $_GET['acao'] ?? null;
+
+// CADASTRAR
+if ($acao === 'cadastrar') {
+    $responsavel->nome = $_POST['nome'];
+    $responsavel->email = $_POST['email'];
+    $responsavel->telefone = $_POST['telefone'];
+    $responsavel->senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+    $responsavel->idAluno = $_POST['idAluno'];
+
+    $responsavel->cadastrar();
+
+    header("Location: " . URL_LOCAL_SITE . "?pagina=responsavel-lista");
+    exit;
 }
 
-/**
- * Informações estática da tela
- */
-$titulo = "Responsaveis - Histórico do aluno";
+// EDITAR
+if ($acao === 'editar') {
+    $responsavel->nome = $_POST['nome'];
+    $responsavel->email = $_POST['email'];
+    $responsavel->telefone = $_POST['telefone'];
 
-//Criação de objetos
-$alunoObj = new Aluno(null, null, null);
+    $responsavel->atualizar($_POST['id']);
 
-$exibirFormulario = true;
-$alunoRetorno = $alunoObj->listarPorFrequencia($idAluno);
-$infoAluno = $alunoObj->listarAlunos($idAluno);
-$imagemAluno = $infoAluno[0]['imagem'];
-
-if($alunoRetorno) {
-    $dataNasc = $alunoRetorno[0]['Data_Nasc'];
-    $dataFormatada = $alunoObj->dataFormatada($dataNasc);
+    header("Location: " . URL_LOCAL_SITE . "?pagina=responsavel-lista");
+    exit;
 }
-@include_once './view/header.php';
-@include_once './view/painelAluno.php';
-@include_once './view/footer.php'; 
+
+// EXCLUIR
+if ($acao === 'excluir') {
+    $responsavel->deletar($_GET['id']);
+
+    header("Location: " . URL_LOCAL_SITE . "?pagina=responsavel-lista");
+    exit;
+}
