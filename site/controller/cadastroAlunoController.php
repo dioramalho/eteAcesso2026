@@ -48,5 +48,5 @@ if(@$paginaUrl && $usuarioLogado){
     @include_once './view/cadastroAluno.php';
     @include_once './view/footer.php';
 }else{
-    header('LOCATION:'.constant('URL_LOCAL_SITE')."?pagina=login-secretaria");
+    header('LOCATION:'.constant('URL_LOCAL_SITE')."?pagina=secretaria");
 }

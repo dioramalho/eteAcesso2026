@@ -5,7 +5,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
 
 // var_dump($_SERVER['DOCUMENT_ROOT']);
-$enviroment['local'] = "http://localhost/eteAcesso2026/";
+$enviroment['local'] = "https://localhost/eteAcesso2026/";
 $enviroment['homol'] = "https://diogoramalho.com.br/ete/aie-homol/";
 $enviroment['prod'] = "https://diogoramalho.com.br/ete/aie/";
 

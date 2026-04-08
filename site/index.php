@@ -39,15 +39,21 @@ if ($paginaUrl === 'acesso') {
 //     include_once "./controller/alunoDetalheController.php";
     
 //}
- elseif ($paginaUrl === 'login-secretaria') {
+ elseif ($paginaUrl === 'secretaria') {
+    include_once './model/aluno.php';
     include_once "./model/login.php";
-    include_once "./controller/loginController.php";  
+    include_once "./controller/loginController.php";
 
-}  elseif ($paginaUrl === 'secretaria') {
+}elseif ($paginaUrl === 'coordenacao') {
     include_once './model/aluno.php';
     include_once "./controller/coordenacaoController.php";
 
-}elseif ($paginaUrl === 'login-responsavel') {
+} elseif ($paginaUrl === 'cadastro-coordenacao') {
+    include_once './model/login.php';
+    include_once './model/coordenacao.php';
+    include_once "./controller/cadastroCoordenacaoController.php";
+
+} elseif ($paginaUrl === 'login-responsavel') {
     if ($_GET && isset($_GET['idAluno'])) { $idAluno = $_GET['idAluno'];} else { $idAluno = 0; }
     include_once "./controller/loginControllerResponsaveis.php";
 
@@ -88,6 +94,10 @@ if ($paginaUrl === 'acesso') {
 }elseif($paginaUrl === 'deletar-aluno'){
     include_once './model/aluno.php';
     include_once './controller/deletarAlunoController.php';
+
+}elseif($paginaUrl === 'dashboard'){
+    include_once './model/login.php';
+    include_once './controller/dashboardController.php';
 
 }else{
     include_once './view/header.php';

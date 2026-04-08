@@ -1,0 +1,169 @@
+/* ================================================================
+   ESTILOS DO DASHBOARD COM CARDS
+   ================================================================ */
+
+:root {
+    --bg-color: #ffffff;
+    --card-bg: #ffffff;
+    --border-color: #e6ecf1;
+    --text-dark: #323232;
+    --text-muted: #ffffff;
+    --shadow-light: 0 8px 20px rgba(15, 23, 42, 0.08);
+    --shadow-hover: 0 12px 28px rgba(15, 23, 42, 0.12);
+    --transition: all 0.2s ease;
+}
+
+body {
+    background-color: #ffffff !important;
+}
+
+html {
+    background-color: #ffffff !important;
+}
+
+.dashboard-container {
+    background: var(--bg-color);
+    min-height: 100vh;
+    padding-bottom: 32px;
+}
+
+.dashboard-section {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.dashboard-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+/* Subtítulo */
+.dashboard-subtitle {
+    font-size: 1rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+/* Cards */
+.card {
+    background: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.card-text {
+    color: #fefdfd;
+}
+.text-b{
+    color: #e6ecf1;
+    background-color: darkslategray;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.badge {
+    background: #f3f4f6;
+    color: #374151;
+    font-weight: 600;
+    border: none;
+}
+
+/* Estilos extras removidos para usar apenas Bootstrap moderno e simples */
+
+/* Removendo estilos antigos de estrutura para usar Bootstrap puro */
+.dashboard-card, .card-description, .card-footer-badge, .badge-info, .card-arrow {
+    all: unset;
+}
+
+
+
+/* Botão de Logout */
+.btn-logout {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 40px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.btn-logout:hover {
+    background: linear-gradient(135deg, #c0392b, #a93226);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.btn-logout:active {
+    transform: translateY(-1px);
+}
+
+.logout-icon {
+    font-size: 1.3rem;
+}
+
+
+/* ================================================================
+   ANIMAÇÕES E EFEITOS ESPECIAIS
+   ================================================================ */
+
+/* Animação de entrada dos cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dashboard-card {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.dashboard-card:nth-child(1) { animation-delay: 0.1s; }
+.dashboard-card:nth-child(2) { animation-delay: 0.2s; }
+.dashboard-card:nth-child(3) { animation-delay: 0.3s; }
+.dashboard-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus para acessibilidade */
+.card-link:focus {
+    outline-offset: 4px;
+}
+
+.card-link:focus .dashboard-card {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 4px;
+}

@@ -11,12 +11,16 @@
     <link rel="stylesheet" href="<?= constant("URL_LOCAL_BASE")?>assets/css/circulo-animacao.css">
     <link rel="stylesheet" href="<?= constant("URL_LOCAL_BASE")?>assets/css/tabelas.css">
     <link rel="stylesheet" href="<?= constant("URL_LOCAL_BASE")?>assets/css/tela-coordenacao-mobile.css">
+    <link rel="stylesheet" href="<?= constant("URL_LOCAL_BASE")?>assets/css/dashboard-cards.css">
     
     <title>Acesso Inteligente ETE</title>
     <script>
-        setTimeout(function() {
-        location.reload();
-        }, 10000);
+        // Atualiza automaticamente apenas na página de painel em tempo real, não no formulário de cadastro
+        if (window.location.search.indexOf('pagina=secretaria') !== -1) {
+            setTimeout(function() {
+                location.reload();
+            }, 10000);
+        }
     </script>
 </head>
 <body>

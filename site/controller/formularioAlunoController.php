@@ -13,6 +13,6 @@ if($_SESSION ){
     $usuarioLogado = Login::verificarAutenticacao('secretaria');
 }else{
     unset($_SESSION);
-    header('LOCATION:'.constant('URL_LOCAL_SITE')."?pagina=login-secretaria");
+    header('LOCATION:'.constant('URL_LOCAL_SITE')."?pagina=secretaria");
 }
 include_once './view/formularioCadastroAluno.php';

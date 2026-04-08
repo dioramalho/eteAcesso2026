@@ -44,7 +44,7 @@ if (@$paginaUrl && $usuarioLogado) {
 }
 
 if(@$paginaUrl && !$usuarioLogado) {
- header('LOCATION:' . constant('URL_LOCAL_SITE') . "?pagina=login-secretaria");
+ header('LOCATION:' . constant('URL_LOCAL_SITE') . "?pagina=secretaria");
 }
 
 
