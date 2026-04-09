@@ -8,34 +8,22 @@ $acao = $_POST['acao'] ?? $_GET['acao'] ?? null;
 
 // CADASTRAR
 if ($acao === 'cadastrar') {
-    $responsavel->nome = $_POST['nome'];
-    $responsavel->email = $_POST['email'];
-    $responsavel->telefone = $_POST['telefone'];
-    $responsavel->senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
-    $responsavel->idAluno = $_POST['idAluno'];
-
-    $responsavel->cadastrar();
-
-    header("Location: " . URL_LOCAL_SITE . "?pagina=responsavel-lista");
-    exit;
+    $responsavel->cadastrar($_POST);
 }
 
 // EDITAR
-if ($acao === 'editar') {
-    $responsavel->nome = $_POST['nome'];
-    $responsavel->email = $_POST['email'];
-    $responsavel->telefone = $_POST['telefone'];
-
-    $responsavel->atualizar($_POST['id']);
-
-    header("Location: " . URL_LOCAL_SITE . "?pagina=responsavel-lista");
-    exit;
+elseif ($acao === 'editar') {
+    $responsavel->atualizar($_POST);
 }
 
 // EXCLUIR
-if ($acao === 'excluir') {
-    $responsavel->deletar($_GET['id']);
-
-    header("Location: " . URL_LOCAL_SITE . "?pagina=responsavel-lista");
-    exit;
+elseif ($acao === 'excluir') {
+    $id = $_GET['id'] ?? null;
+    if ($id) {
+        $responsavel->deletar($id);
+    }
 }
+
+// REDIRECIONA
+header("Location: " . URL_LOCAL_SITE . "?pagina=responsavel-lista");
+exit;

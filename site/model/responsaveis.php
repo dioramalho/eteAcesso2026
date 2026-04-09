@@ -3,59 +3,27 @@ require_once __DIR__ . '/../../configuracao/conexao.php';
 
 class Responsaveis {
 
-    public $id;
-    public $nome;
-    public $email;
-    public $telefone;
-    public $senha;
-    public $idAluno;
-
-    public function __construct($nome=null, $email=null, $telefone=null, $senha=null, $idAluno=null){
-        $this->nome = $nome;
-        $this->email = $email;
-        $this->telefone = $telefone;
-        $this->senha = $senha;
-        $this->idAluno = $idAluno;
-    }
-
     // CREATE
-    public function cadastrar(){
+    public function cadastrar($dados){
         $pdo = Database::conexao();
 
-        $sql = "INSERT INTO responsavel (nome, email, telefone, senha, idAluno)
+        $sql = "INSERT INTO responsavel 
+                (nome, email, telefone, senha, idAluno)
                 VALUES (:nome, :email, :telefone, :senha, :idAluno)";
 
         $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':nome', $this->nome);
-        $stmt->bindParam(':email', $this->email);
-        $stmt->bindParam(':telefone', $this->telefone);
-        $stmt->bindParam(':senha', $this->senha);
-        $stmt->bindParam(':idAluno', $this->idAluno);
 
-        return $stmt->execute();
-    }
-
-    // READ
-    public function listar(){
-        $pdo = Database::conexao();
-        return $pdo->query("SELECT * FROM responsavel")->fetchAll(PDO::FETCH_ASSOC);
-    }
-
-    // BUSCAR POR ID
-    public function buscar($id){
-        $pdo = Database::conexao();
-
-        $sql = "SELECT * FROM responsavel WHERE id = :id";
-
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':id', $id);
-        $stmt->execute();
-
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        return $stmt->execute([
+            ':nome' => $dados['nome'] ?? null,
+            ':email' => $dados['email'] ?? null,
+            ':telefone' => $dados['telefone'] ?? null,
+            ':senha' => password_hash($dados['senha'], PASSWORD_DEFAULT),
+            ':idAluno' => $dados['idAluno'] ?? null
+        ]);
     }
 
     // UPDATE
-    public function atualizar($id){
+    public function atualizar($dados){
         $pdo = Database::conexao();
 
         $sql = "UPDATE responsavel 
@@ -63,35 +31,45 @@ class Responsaveis {
                 WHERE id = :id";
 
         $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':nome', $this->nome);
-        $stmt->bindParam(':email', $this->email);
-        $stmt->bindParam(':telefone', $this->telefone);
-        $stmt->bindParam(':id', $id);
 
-        return $stmt->execute();
+        return $stmt->execute([
+            ':nome' => $dados['nome'] ?? null,
+            ':email' => $dados['email'] ?? null,
+            ':telefone' => $dados['telefone'] ?? null,
+            ':id' => $dados['id']
+        ]);
     }
 
     // DELETE
     public function deletar($id){
         $pdo = Database::conexao();
 
-        $sql = "DELETE FROM responsavel WHERE id = :id";
+        $stmt = $pdo->prepare("DELETE FROM responsavel WHERE id = :id");
 
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':id', $id);
-
-        return $stmt->execute();
+        return $stmt->execute([':id' => $id]);
     }
 
-    // BUSCAR POR ID DO ALUNO
+    // READ
+    public function listar(){
+        $pdo = Database::conexao();
+        return $pdo->query("SELECT * FROM responsavel")
+                   ->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function buscar($id){
+        $pdo = Database::conexao();
+
+        $stmt = $pdo->prepare("SELECT * FROM responsavel WHERE id = :id");
+        $stmt->execute([':id' => $id]);
+
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
     public function buscarPorId($idAluno){
         $pdo = Database::conexao();
 
-        $sql = "SELECT * FROM responsavel WHERE idAluno = :idAluno";
-
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':idAluno', $idAluno);
-        $stmt->execute();
+        $stmt = $pdo->prepare("SELECT * FROM responsavel WHERE idAluno = :idAluno");
+        $stmt->execute([':idAluno' => $idAluno]);
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
