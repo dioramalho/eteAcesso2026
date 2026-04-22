@@ -249,6 +249,16 @@
                     <div class="col-sm-6 botao-mobile" >
                     <a type="button" class="btn btn-outline-primary" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=lista-aluno">Lista de Alunos</a>
                     </div>
+                    
+                    <!-- Botão para acessar a página de dashboard -->
+                    
+
+                    <div class="col-sm-6 botao-mobile" >
+                        <a type="button" class="btn btn-outline-primary" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=dashboard">Voltar ao Dashboard</a>
+                    </div> 
+
+
+                    
                 </div>
 
             <!-- Tabela que será gerada com as informações de quando o aluno entrar no sistema na entrada da escola  -->

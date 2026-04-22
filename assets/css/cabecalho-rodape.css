@@ -10,6 +10,8 @@ label{
 p {
     background-color: #04003c;
     text-align: right;
+    padding-left: 23px;
+    
 }
 
 img{
@@ -36,3 +38,9 @@ img{
     width: 75px;
     padding: 5px;
 }
+
+.rodape{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
