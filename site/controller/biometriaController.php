@@ -30,7 +30,7 @@ if (@$paginaUrl && $usuarioLogado && @$idAluno) {
     @include_once './view/footer-biometria.php';
  } 
 if(@$paginaUrl && !$usuarioLogado) {
-    header('LOCATION:' . constant('URL_LOCAL_SITE') . "?pagina=login-secretaria");
+    header('LOCATION:' . constant('URL_LOCAL_SITE') . "?pagina=secretaria");
 }
 
 if ($biometria) {
