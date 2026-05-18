@@ -13,10 +13,26 @@ $senha = ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['senha'])) ? $_P
 $tipo = ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['tipo'])) ? $_POST['tipo'] : null;
 $usuarioLogado = false;
 $msgAlert = "";
+$logout = (!empty($_GET['logout'])) ? $_GET['logout'] : null;
+
 /**
  * Informações estática da tela
  */
 $titulo = "Login Acesso";
+
+/**
+ * Verifica se há solicitação de logout
+ */
+if($logout) {
+    if($_SESSION){
+        session_destroy();
+    }
+    $exibirFormulario = true;
+    @include_once './view/header.php';
+    @include_once './view/loginSecretaria.php';
+    @include_once './view/footer.php';
+    exit();
+}
 
 
 //Validação de login e senha
@@ -35,30 +51,31 @@ if($usuarioLogado){
 }
 
 /**
- * Tela vem do index via get
+ * Verifica se usuário já está autenticado
  */
-if (@$paginaUrl) {
-    if($_SESSION){
-        // session_unset($_SESSION["usuario"]);
-        session_destroy();
-    }
-    $exibirFormulario = true;
-    @include_once './view/header.php';
-    @include_once './view/loginSecretaria.php';
-    @include_once './view/footer.php';
+$usuarioJaAutenticado = Login::verificarAutenticacao('secretaria');
+
+/**
+ * Se já está autenticado, redireciona para o dashboard
+ */
+if($usuarioJaAutenticado && !$usuarioLogado) {
+    header('LOCATION:'.constant('URL_LOCAL_SITE')."?pagina=dashboard");
+    exit();
 }
 
-$retorno = Login::verificarAutenticacao($tipo);
-if(!$retorno || @$paginaUrl) {
+/**
+ * Tela vem do index via get (logout)
+ */
+// Logout removido de aqui, agora é tratado acima com o parâmetro &logout=true
 
-    $msgAlert = 'Login ou senha incorretos, tente novamente';
+$retorno = Login::verificarAutenticacao($tipo);
+if(!$retorno) {
+    $msgAlert = $usuarioLogado ? 'Login ou senha incorretos, tente novamente' : '';
     $exibirFormulario = true;
-    @include_once '../view/header.php';
-    @include_once '../view/loginSecretaria.php';
-    @include_once '../view/footer.php'; 
     @include_once './view/header.php';
     @include_once './view/loginSecretaria.php';
     @include_once './view/footer.php';
 }
     
-if($retorno && $tipo === 'secretaria') header('LOCATION:'.constant('URL_LOCAL_SITE')."?pagina=$tipo");
+if($retorno && $tipo === 'secretaria') header('LOCATION:'.constant('URL_LOCAL_SITE')."?pagina=dashboard");
+?>

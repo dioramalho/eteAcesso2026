@@ -42,7 +42,7 @@ if(@$paginaUrl == 'edicao-aluno' && $usuarioLogado && $alunoRetorno && !$_POST){
     @include_once './view/formularioEdicaoAluno.php';
     @include_once './view/footer.php';
 } elseif(!$_POST){
-    header('LOCATION:'.constant('URL_LOCAL_SITE')."?pagina=login-secretaria");
+    header('LOCATION:'.constant('URL_LOCAL_SITE')."?pagina=secretaria");
 }
 
 // Verificando informações do POST e chamando método para editar aluno
