@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
     
     <title>Acesso Inteligente ETE</title>
     <script>
-        // Atualiza automaticamente apenas na p├ígina de painel em tempo real, n├úo no formul├írio de cadastro
+        // Atualiza automaticamente apenas na página de painel em tempo real, não no formulário de cadastro
         if (window.location.search.indexOf('pagina=secretaria') !== -1) {
             setTimeout(function() {
                 location.reload();
@@ -24,4 +24,3 @@
     </script>
 </head>
 <body>
-
