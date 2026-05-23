@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -11,6 +11,17 @@
     <link rel="stylesheet" href="<?= constant("URL_LOCAL_BASE")?>assets/css/circulo-animacao.css">
     <link rel="stylesheet" href="<?= constant("URL_LOCAL_BASE")?>assets/css/tabelas.css">
     <link rel="stylesheet" href="<?= constant("URL_LOCAL_BASE")?>assets/css/tela-coordenacao-mobile.css">
+    <link rel="stylesheet" href="<?= constant("URL_LOCAL_BASE")?>assets/css/dashboard-cards.css">
     
-
+    <title>Acesso Inteligente ETE</title>
+    <script>
+        // Atualiza automaticamente apenas na p├ígina de painel em tempo real, n├úo no formul├írio de cadastro
+        if (window.location.search.indexOf('pagina=secretaria') !== -1) {
+            setTimeout(function() {
+                location.reload();
+            }, 10000);
+        }
+    </script>
+</head>
 <body>
+

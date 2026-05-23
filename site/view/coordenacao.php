@@ -1,4 +1,4 @@
-<div class="container">
+﻿<div class="container">
     <div class="row">
         <header>
             <img src="<?= constant("URL_LOCAL_IMG") ?>tela/ete_logo.png" class="mx-auto d-block img-fluid">
@@ -40,7 +40,7 @@ foreach ($listaAlunos as $aluno) {
 <h3>Total de Alunos</h3>
 <h5>Em tempo real</h5>
 
-<!-- 🔥 CÍRCULO CORRIGIDO -->
+<!-- ­ƒöÑ C├ìRCULO CORRIGIDO -->
 <div class="col-sm-3 mx-auto">
     <svg viewBox="0 0 100 100" width="150">
 
@@ -61,7 +61,7 @@ foreach ($listaAlunos as $aluno) {
             stroke-dashoffset="251.2">
         </circle>
 
-        <!-- Número -->
+        <!-- N├║mero -->
         <text id="totalAlunosText"
             x="50%" y="50%"
             dominant-baseline="middle"
@@ -101,7 +101,7 @@ foreach ($listaAlunos as $aluno) {
 
 </div>
 
-<!-- BOTÕES -->
+<!-- BOT├òES -->
 <div class="row mt-3">
     <div class="col-sm-6">
         <a class="btn btn-outline-primary" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=lista-aluno">
@@ -119,13 +119,13 @@ foreach ($listaAlunos as $aluno) {
 <!-- LISTA -->
 <div class="col-sm-12 mt-3" id="listaAlunos" style="display:none;">
     <h3>Lista de alunos</h3>
-    <h5>Presentes até o momento.</h5>
+    <h5>Presentes at├® o momento.</h5>
 
     <div class="table-responsive">
         <table class="table table-bordered">
             <thead class="table-dark">
                 <tr>
-                    <th>Matrícula</th>
+                    <th>Matr├¡cula</th>
                     <th>Nome</th>
                     <th>Data</th>
                     <th>Dia</th>
@@ -159,7 +159,7 @@ foreach ($listaAlunos as $aluno) {
 </footer>
 </div>
 
-<!-- 🔥 CSS ANIMAÇÃO CORRIGIDA -->
+<!-- ­ƒöÑ CSS ANIMA├ç├âO CORRIGIDA -->
 <style>
 #loaderCircle {
     transform: rotate(-90deg);
@@ -169,7 +169,7 @@ foreach ($listaAlunos as $aluno) {
 
 @keyframes progresso {
     0% { stroke-dashoffset: 251.2; }
-    50% { stroke-dashoffset: 0; } /* 🔥 CORREÇÃO AQUI */
+    50% { stroke-dashoffset: 0; } /* ­ƒöÑ CORRE├ç├âO AQUI */
     100% { stroke-dashoffset: 251.2; }
 }
 </style>
@@ -223,7 +223,7 @@ select.addEventListener("change", function () {
     atualizarTabela(curso);
 });
 
-// 🔥 ATUALIZAÇÃO SEM RELOAD
+// ­ƒöÑ ATUALIZA├ç├âO SEM RELOAD
 function atualizarDados() {
     fetch('dados.php')
         .then(res => res.json())
@@ -241,7 +241,7 @@ function atualizarDados() {
 
 setInterval(atualizarDados, 5000);
 
-// BOTÃO LISTA
+// BOT├âO LISTA
 const lista = document.getElementById("listaAlunos");
 const botao = document.getElementById("botaoTurma");
 
@@ -249,3 +249,4 @@ botao.addEventListener("click", () => {
     lista.style.display = lista.style.display === "none" ? "block" : "none";
 });
 </script>
+
