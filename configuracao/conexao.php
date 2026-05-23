@@ -24,7 +24,7 @@ class Database
     {
         # Informações sobre o banco de dados:
             $db_host = "localhost";
-            $db_nome = "acessoete26_bd";
+            $db_nome = "eteAcesso2026";
             $db_usuario = "root";
             $db_senha = "";
             $db_driver = "mysql";

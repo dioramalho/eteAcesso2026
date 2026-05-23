@@ -13,10 +13,12 @@
     <link rel="stylesheet" href="<?= constant("URL_LOCAL_BASE")?>assets/css/tela-coordenacao-mobile.css">
     
     <title>Acesso Inteligente ETE</title>
+
+    <!--
     <script>
         setTimeout(function() {
         location.reload();
         }, 10000);
-    </script>
+    </script>-->
 </head>
 <body>
