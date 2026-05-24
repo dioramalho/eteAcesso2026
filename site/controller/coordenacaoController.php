@@ -27,6 +27,13 @@ if($listaAlunos){
     $totalAlunos = 0;
 }
 
+// Retorno AJAX para atualização do contador sem recarregar a página
+if (!empty($_GET['ajax']) && $_GET['ajax'] === 'total') {
+    header('Content-Type: application/json');
+    echo json_encode(['total' => $totalAlunos]);
+    exit;
+}
+
 $usuarioLogado = Login::verificarAutenticacao('secretaria'); 
 
 /**

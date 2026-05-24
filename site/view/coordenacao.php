@@ -86,7 +86,7 @@
 
                                 <?php endforeach; ?>
                                 <tr>
-                                    <img src="..." class="imagem mx-auto d-block">
+                                    
                                     <td><img src="<?= constant("URL_LOCAL_IMG") ?>tela/adm.png" alt="Logo do Curso" class="imagem"></td>
                                     <td>ADM</td>
                                     <td> 1 Ano A</td>
@@ -481,4 +481,24 @@
             log.style.display = "block";
         }
     });
+</script>
+<script>
+    const totalAlunosText = document.getElementById('total');
+    const contadorUrl = '<?= constant("URL_LOCAL_SITE") ?>?pagina=secretaria&ajax=total';
+
+    function atualizarContadorGrafico() {
+        fetch(contadorUrl)
+            .then(response => response.json())
+            .then(data => {
+                if (typeof data.total === 'number') {
+                    totalAlunosText.textContent = data.total;
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao atualizar contador:', error);
+            });
+    }
+
+    // Atualiza apenas o contador do gráfico a cada 5 segundos
+    setInterval(atualizarContadorGrafico, 5000);
 </script>
