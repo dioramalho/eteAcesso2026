@@ -465,12 +465,12 @@
 
     select.addEventListener("change", function () {
 
-        // Esconde tudo primeiro
+        // Esconde todas as tabelas de curso antes de mostrar a escolhida
         adm.style.display = "none";
         tds.style.display = "none";
         log.style.display = "none";
 
-        // Mostra o selecionado
+        // Mostra apenas a tabela do curso selecionado
         if (this.value === "ADM") {
             adm.style.display = "block";
         }
@@ -483,22 +483,27 @@
     });
 </script>
 <script>
+    // Elemento do texto dentro do SVG que mostra o total de alunos.
     const totalAlunosText = document.getElementById('total');
+
+    // Endpoint que retorna apenas o número total de alunos em JSON.
     const contadorUrl = '<?= constant("URL_LOCAL_SITE") ?>?pagina=secretaria&ajax=total';
 
     function atualizarContadorGrafico() {
         fetch(contadorUrl)
             .then(response => response.json())
             .then(data => {
+                // Se a resposta contiver um total válido, atualiza só o número.
                 if (typeof data.total === 'number') {
                     totalAlunosText.textContent = data.total;
                 }
             })
             .catch(error => {
+                // Em caso de erro, apenas registra no console sem recarregar a página.
                 console.error('Erro ao atualizar contador:', error);
             });
     }
 
-    // Atualiza apenas o contador do gráfico a cada 5 segundos
+    // Atualiza periodicamente o contador do gráfico sem recarregar a página inteira.
     setInterval(atualizarContadorGrafico, 5000);
 </script>
