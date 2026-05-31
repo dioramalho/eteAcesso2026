@@ -77,7 +77,10 @@ if ($paginaUrl === 'acesso') {
     include_once './model/biometria.php';
     include_once './controller/biometriaController.php';
 
-}elseif ($paginaUrl === 'cadastro-aluno'){
+} elseif ($paginaUrl === 'cadastro-coordenacao') {
+    include_once './controller/cadastroCoordenacaoController.php';
+
+} elseif ($paginaUrl === 'cadastro-aluno'){
     include_once './model/aluno.php';
     include_once './controller/cadastroAlunoController.php';
 
@@ -89,9 +92,13 @@ if ($paginaUrl === 'acesso') {
     include_once './model/aluno.php';
     include_once './controller/deletarAlunoController.php';
 
-}else{
+} elseif ($paginaUrl === 'dashboard') {
+    include_once './model/login.php';
+    include_once './controller/dashboardController.php';
+
+} else {
     include_once './view/header.php';
-    include_once './view/paginaNaoLocalizada.php';
+    include_once './view/PaginaNaoLocalizada.php';
     include_once './view/footer.php';
 }
 
