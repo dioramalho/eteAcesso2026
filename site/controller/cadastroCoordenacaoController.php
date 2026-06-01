@@ -1,10 +1,10 @@
 <?php
-session_start();
-@include_once '../../configuracao/configuracao.php';
-@include_once '../../configuracao/conexao.php';
-@include_once '../model/login.php';
-@include_once '../model/coordenacao.php';
-@include_once './view/topo_interno.php';
+
+require_once __DIR__ . '/../../configuracao/configuracao.php';
+require_once __DIR__ . '/../../configuracao/conexao.php';
+require_once __DIR__ . '/../model/login.php';
+require_once __DIR__ . '/../model/coordenacao.php';
+include_once __DIR__ . '/../view/topo_interno.php';
 
 $usuarioLogado = Login::verificarAutenticacao('secretaria');
 
