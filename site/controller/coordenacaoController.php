@@ -27,6 +27,14 @@ if($listaAlunos){
     $totalAlunos = 0;
 }
 
+// Se a requisição for via AJAX para atualizar apenas o total de alunos,
+// retorna JSON com o valor e encerra aqui sem carregar a página completa.
+if (!empty($_GET['ajax']) && $_GET['ajax'] === 'total') {
+    header('Content-Type: application/json');
+    echo json_encode(['total' => $totalAlunos]);
+    exit;
+}
+
 $usuarioLogado = Login::verificarAutenticacao('secretaria'); 
 
 /**
