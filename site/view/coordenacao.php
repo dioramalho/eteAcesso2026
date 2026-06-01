@@ -18,21 +18,109 @@
                 <h3>Total de Alunos</h3>
                 <h5>Em tempo real.</h5>
 
-                <div class="col-sm-3">
-                    <svg viewBox="0 0 100 100">
-                        <rect x="0" y="0" width="50" height="50" stroke="transparent" stroke-width="3px" fill="transparent" />
-                        <circle class="bg" cx="50" cy="50" r="40" stroke="" stroke-width="3px" fill="" /><text id="total" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">
-                            <?= $totalAlunos ?>
-                        </text>
-                        <circle class="meter" cx="50" cy="50" r="40" />
-                    </svg>
-                    
+                <div class="col-sm-4 mb-3">
+                    <label><strong>Selecione o Curso:</strong></label>
+                    <select id="selectCurso" class="form-control">
+                        <option value="">-- Escolha --</option>
+                        <option value="ADM">ADM</option>
+                        <option value="TDS">TDS</option>
+                        <option value="LOG">LOG</option>
+                    </select>
                 </div>
+            </div>
 
-                <div class="offset-1 col-sm-4 turmaAlunos">
+            <div class="row mt-4">
+                <div class="col-sm-12">
+                    <div id="ADM" class="turmaAlunos" style="display:none;">
+                        <table class="table responsive-sm table table-borderless mb-4">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Curso</th>
+                                    <th>Turma</th>
+                                    <th>SubTotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                $adm1a_contador = 0;
+                                $adm1b_contador = 0;
 
-                    <div id="turmaAlunos">
-                        <table id="tabela" class="table responsive-sm table table-borderless mb-4">
+                                $adm2a_contador = 0;
+                                $adm2b_contador = 0;
+
+                                $adm3a_contador = 0;
+                                $adm3b_contador = 0;
+                                foreach ($listaAlunos as $aluno) :
+                                    if ($aluno["Curso"] === 'ADM' && $aluno["Serie"] === '1 Ano A') {
+                                        $adm1a_contador++;
+                                    }
+                                    if ($aluno["Curso"] === 'ADM' && $aluno["Serie"] === '2 Ano A') {
+                                        $adm2a_contador++;
+                                    }
+
+                                    if ($aluno["Curso"] === 'ADM' && $aluno["Serie"] === '3 Ano A') {
+                                        $adm3a_contador++;
+                                    }
+                                    if ($aluno["Curso"] === 'ADM' && $aluno["Serie"] === '1 Ano B') {
+                                        $adm1b_contador++;
+                                    }
+                                    if ($aluno["Curso"] === 'ADM' && $aluno["Serie"] === '2 Ano B') {
+                                        $adm2b_contador++;
+                                    }
+                                    if ($aluno["Curso"] === 'ADM' && $aluno["Serie"] === '3 Ano B') {
+                                        $adm3b_contador++;
+                                    }
+                                    $adm_total_contador = $adm1a_contador + $adm2a_contador + $adm3a_contador + $adm1b_contador + $adm2b_contador + $adm3b_contador;
+                                ?>
+
+                                <?php endforeach; ?>
+                                <tr>
+                                    <td><img src="<?= constant("URL_LOCAL_IMG") ?>tela/adm.jpeg" alt="Logo do Curso" class="imagem"></td>
+                                    <td>ADM</td>
+                                    <td>1 Ano A</td>
+                                    <td><?= $adm1a_contador ?></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="<?= constant("URL_LOCAL_IMG") ?>tela/adm.jpeg" alt="Logo do Curso" class="imagem"></td>
+                                    <td>ADM</td>
+                                    <td>2 Ano A</td>
+                                    <td><?= $adm2a_contador ?></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="<?= constant("URL_LOCAL_IMG") ?>tela/adm.jpeg" alt="Logo do Curso" class="imagem"></td>
+                                    <td>ADM</td>
+                                    <td>3 Ano A</td>
+                                    <td><?= $adm3a_contador ?></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="<?= constant("URL_LOCAL_IMG") ?>tela/adm.jpeg" alt="Logo do Curso" class="imagem"></td>
+                                    <td>ADM</td>
+                                    <td>1 Ano B</td>
+                                    <td><?= $adm1b_contador ?></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="<?= constant("URL_LOCAL_IMG") ?>tela/adm.jpeg" alt="Logo do Curso" class="imagem"></td>
+                                    <td>ADM</td>
+                                    <td>2 Ano B</td>
+                                    <td><?= $adm2b_contador ?></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="<?= constant("URL_LOCAL_IMG") ?>tela/adm.jpeg" alt="Logo do Curso" class="imagem"></td>
+                                    <td>ADM</td>
+                                    <td>3 Ano B</td>
+                                    <td><?= $adm3b_contador ?></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="3">Total de Alunos ADM:</th>
+                                    <td><?= $adm_total_contador ?></td>
+                                </tr>
+                                </tbody>
+                        </table>
+                    </div>
+
+                    <div id="TDS" class="turmaAlunos" style="display:none;">
+                        <table class="table responsive-sm table table-borderless mb-4">
                             <thead>
                                 <tr>
                                     <th></th>
@@ -134,11 +222,8 @@
                         </table>
                     </div>
 
-                </div>
-
-                <div class="col-sm-4">
-                    <div id="turmaAlunos">
-                        <table id="tabela" class="table responsive-sm table table-borderless">
+                    <div id="LOG" class="turmaAlunos" style="display:none;">
+                        <table class="table responsive-sm table table-borderless">
                             <thead>
                                 <tr>
                                     <th></th>
@@ -241,9 +326,18 @@
                         </table>
                     </div>
                 </div>
+            </div>
 
-
-
+            <div class="row mt-4">
+                <div class="col-sm-3">
+                    <svg viewBox="0 0 100 100">
+                        <rect x="0" y="0" width="50" height="50" stroke="transparent" stroke-width="3px" fill="transparent" />
+                        <circle class="bg" cx="50" cy="50" r="40" stroke="" stroke-width="3px" fill="" /><text id="total" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">
+                            <?= $totalAlunos ?>
+                        </text>
+                        <circle class="meter" cx="50" cy="50" r="40" />
+                    </svg>
+                </div>
             </div>
             <div class="row">
                     <div class="col-sm-6 botao-mobile" >
@@ -268,9 +362,10 @@
                 </div>
             </div>
             
-            <div class="col-sm-12" id="listaAlunos" style="display:none;">
-                <h3>Lista de alunos</h3>
-                <h5>Presentes até o momento.</h5>
+            <div class="row mt-4">
+                <div class="col-sm-12" id="listaAlunos" style="display:none;">
+                    <h3>Lista de alunos</h3>
+                    <h5>Presentes até o momento.</h5>
                 <div class="table-responsive-sm">
 
                     <table class="table table-bordered">
@@ -308,6 +403,7 @@
                         </tbody>
                     </table>
                 </div>
+                </div>
             </div>
         </div>
     </section>
@@ -342,6 +438,25 @@
         } else {
             // Se o conteúdo estiver visível, oculte-o
             listaAlunos.style.display = "none";
+        }
+    });
+
+    // Controlar a exibição dos cursos com o dropdown
+    var selectCurso = document.getElementById("selectCurso");
+    selectCurso.addEventListener("change", function() {
+        // Ocultar todas as seções de cursos
+        var cursosContainers = document.querySelectorAll(".turmaAlunos");
+        cursosContainers.forEach(function(container) {
+            container.style.display = "none";
+        });
+
+        // Exibir a seção do curso selecionado
+        var cursoSelecionado = this.value;
+        if (cursoSelecionado !== "") {
+            var cursoDiv = document.getElementById(cursoSelecionado);
+            if (cursoDiv) {
+                cursoDiv.style.display = "block";
+            }
         }
     });
 </script>

@@ -16,7 +16,7 @@
             <div class="row g-4 justify-content-center">
                 <!-- Card 1: Monitor de Acessos (Coordenação) -->
                 <div class="col-md-6 col-lg-5">
-                    <a href="<?= constant("URL_LOCAL_SITE") ?>?pagina=coordenacao" class="text-decoration-none text-dark">
+                    <a href="<?= constant("URL_LOCAL_SITE") ?>?pagina=secretaria" class="text-decoration-none text-dark">
                         <div class="card h-100 border rounded-3 shadow-sm">
                             <div class="card-body d-flex flex-column">
                                 <div class="mb-3 d-flex align-items-center justify-content-center" style="height: 64px; width: 64px; border-radius: 50%; background: #eff2f7;">
@@ -91,7 +91,7 @@
             <!-- Botão de Sair -->
             <div class="row mt-5 justify-content-center">
                 <div class="col-12 text-center">
-                    <a href="<?= constant("URL_LOCAL_SITE") ?>?pagina=secretaria&logout=true" class="btn-logout">
+                    <a href="<?= constant("URL_LOCAL_SITE") ?>?pagina=login-secretaria&logout=true" class="btn-logout">
                         <span class="logout-icon">🚪</span> Sair do Sistema
                     </a>
                 </div>
