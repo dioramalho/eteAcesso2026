@@ -38,11 +38,11 @@ class Aluno
     function buscarPorMatricula($mat)
     {
         $pdo = Database::conexao();
-        $sql = "SELECT * FROM aluno WHERE matricula = $mat";
+        $sql = "SELECT * FROM aluno WHERE matricula = :matricula LIMIT 1";
         $stmt = $pdo->prepare($sql);
-        $list = $stmt->execute();
-        $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $list;
+        $stmt->bindValue(':matricula', $mat);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
     /**
@@ -153,11 +153,14 @@ class Aluno
     function ListaDeAluno()
     {
         $pdo = Database::conexao();
-        $sql = "SELECT * FROM aluno";
+        $sql = "SELECT aluno.id, aluno.Matricula, aluno.Nome, aluno.Serie, aluno.Curso, aluno.imagem, aluno.biometria01,
+                GROUP_CONCAT(DISTINCT responsavel.nome SEPARATOR ', ') AS responsavel_nome
+                FROM aluno
+                LEFT JOIN responsavel ON responsavel.idAluno = aluno.id
+                GROUP BY aluno.id";
         $stmt = $pdo->prepare($sql);
-        $list = $stmt->execute();
-        $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $list;
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     function paginacao($id)
@@ -166,11 +169,15 @@ class Aluno
         global $page;
         global $limit;
         $offset = ($page - 1) * $limit;
-        $sql = "SELECT * FROM aluno LIMIT $limit OFFSET $offset";
+        $sql = "SELECT aluno.id, aluno.Matricula, aluno.Nome, aluno.Serie, aluno.Curso, aluno.imagem, aluno.biometria01,
+                GROUP_CONCAT(DISTINCT responsavel.nome SEPARATOR ', ') AS responsavel_nome
+                FROM aluno
+                LEFT JOIN responsavel ON responsavel.idAluno = aluno.id
+                GROUP BY aluno.id
+                LIMIT $limit OFFSET $offset";
         $stmt = $pdo->prepare($sql);
-        $list = $stmt->execute();
-        $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $list;
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public static function inserirImagem($target_file, $idAluno)
@@ -191,13 +198,17 @@ class Aluno
     public static function buscarPorTermo($termo)
     {
         $pdo = Database::conexao();
-        $sql = "SELECT * FROM aluno WHERE Nome LIKE :termo";
+        $sql = "SELECT aluno.id, aluno.Matricula, aluno.Nome, aluno.Serie, aluno.Curso, aluno.imagem, aluno.biometria01,
+                GROUP_CONCAT(DISTINCT responsavel.nome SEPARATOR ', ') AS responsavel_nome
+                FROM aluno
+                LEFT JOIN responsavel ON responsavel.idAluno = aluno.id
+                WHERE aluno.Nome LIKE :termo
+                GROUP BY aluno.id";
         $stmt = $pdo->prepare($sql);
-        $termo = $termo . '%';  // Adicione '%' antes e depois do termo para fazer uma pesquisa com correspondência parcial
+        $termo = $termo . '%';
         $stmt->bindParam(':termo', $termo, PDO::PARAM_STR);
         $stmt->execute();
-        $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $list;
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
     public static function cadastrarAluno($matricula, $nome, $dataN, $sexo, $serie, $curso, $email, $telefone)
     {
