@@ -23,38 +23,28 @@
             </div>
             <!-- Tabela com o histórico completo do aluno que será gerada de acordo com acesso ao sistema  -->
             <div class="table-responsive-sm m-2">
-
-                <table class="table table-bordered">
-                    <div class="Barra_De_Pesquisa">
-                        <div class="col-md-4">
-                            <span class="col-sm-6 botao-mobile">
-                                <br>
-                                <a type="button" class="btn btn-outline-primary me-2" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=cadastro-aluno">Cadastrar Alunos</a>
-                                <br>
-                                <br>
-                            </span>
-                            <form action="<?= constant("URL_LOCAL_FORMS") ?>listaAlunoController.php" method="post">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" name="termo" placeholder="Digite sua pesquisa">
-                                    <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
-                                </div>
-                            </form>
-                            <br>
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-start gap-2 mb-3">
+                    <a type="button" class="btn btn-outline-primary" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=cadastro-aluno">Cadastrar Alunos</a>
+                    <form action="<?= constant("URL_LOCAL_FORMS") ?>listaAlunoController.php" method="post" class="w-100 w-md-auto">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="termo" placeholder="Pesquisar aluno...">
+                            <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
                         </div>
-                    </div>
-                    <div id="datatable">
-                    </div>
+                    </form>
+                </div>
+
+                <table class="table table-bordered table-hover align-middle">
                     <thead class="table-dark diminuir-fonte-mobile">
                         <tr>
-                            <th>Id</th>
-                            <th>Matrícula</th>
-                            <th>Nome</th>
-                            <th>Turma</th>
-                            <th>Curso</th>
-                            <th class="esconder-mobile">Cadastro</th>
-                            <th class="esconder-mobile">Foto Aluno</th>
-                            <th class="esconder-mobile">Responsavel</th>
-                            <th class="esconder-mobile">Ações</th>
+                            <th scope="col">Id</th>
+                            <th scope="col">Matrícula</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Turma</th>
+                            <th scope="col">Curso</th>
+                            <th scope="col">Cadastro</th>
+                            <th scope="col">Foto</th>
+                            <th scope="col">Responsável</th>
+                            <th scope="col">Ações</th>
                         </tr>
                     </thead>
                     <tbody class="diminuir-fonte-mobile">
@@ -96,12 +86,14 @@
                                     <?php endif; ?>
                                 </td>
 
-                                <td class="esconder-mobile">
-                                    <a href="<?= constant("URL_LOCAL_SITE") ?>?pagina=login-responsavel&idAluno=<?= $aluno['id'] ?>" class="btn btn-outline-primary">Responsavel</a>
+                                <td>
+                                    <?= htmlspecialchars($aluno['responsavel_nome'] ?? 'Sem responsável cadastrado') ?>
                                 </td>
-                                <td class="esconder-mobile">
-                                    <!-- <a type="button" class="btn btn-outline-primary botao-editar-deletar" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=edicao-aluno">Editar</a> -->
-                                    <a type="button" class="btn btn-danger botao-editar-deletar" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=deletar-aluno&idAluno=<?= $aluno['id'] ?>">Deletar</a>
+                                <td>
+                                    <div class="d-flex gap-2 flex-wrap">
+                                        <a type="button" class="btn btn-outline-primary btn-sm" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=cadastro-responsavel&idAluno=<?= $aluno['id'] ?>">Responsável</a>
+                                        <a type="button" class="btn btn-danger btn-sm" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=deletar-aluno&idAluno=<?= $aluno['id'] ?>">Deletar</a>
+                                    </div>
                                 </td>
 
 
