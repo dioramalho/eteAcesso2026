@@ -77,7 +77,16 @@ if ($paginaUrl === 'acesso') {
     include_once './model/biometria.php';
     include_once './controller/biometriaController.php';
 
-} elseif ($paginaUrl === 'cadastro-coordenacao') {
+}elseif ($paginaUrl === 'responsavel-lista') {
+    include_once './model/responsaveis.php';
+    include_once './controller/listaResponsaveisController.php';
+
+} elseif ($paginaUrl === 'cadastro-responsavel') {
+    if ($_GET && isset($_GET['idAluno'])) { $idAluno = $_GET['idAluno'];} else { $idAluno = 0; }
+    include_once './model/responsaveis.php';
+    include_once './controller/responsaveisController.php';
+
+}   elseif ($paginaUrl === 'cadastro-coordenacao') {
     include_once './controller/cadastroCoordenacaoController.php';
 
 } elseif ($paginaUrl === 'cadastro-aluno'){

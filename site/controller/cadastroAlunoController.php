@@ -1,16 +1,13 @@
 <?php
-@include_once '../../configuracao/configuracao.php';
-@include_once '../../configuracao/conexao.php';
-@include_once '../model/seguranca.php';
-@include_once './model/login.php';
-@include_once './model/aluno.php';
-@include_once '../model/login.php';
-@include_once '../model/aluno.php';
-@include_once '../model/utilidades';
+require_once __DIR__ . '/../../configuracao/configuracao.php';
+require_once __DIR__ . '/../../configuracao/conexao.php';
+require_once __DIR__ . '/../model/login.php';
+require_once __DIR__ . '/../model/aluno.php';
 
 /**
  * Informações do formulário
  */
+
 $nome = ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['nome'])) ? $_POST['nome'] : null;
 $sexo = ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['sexo'])) ? $_POST['sexo'] : null;
 $dataN = ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['dataN'])) ? $_POST['dataN'] : null;
@@ -29,14 +26,68 @@ $titulo = "Cadastro de Alunos";
 $alunoObj = new Aluno(null, null, null);
 $usuarioLogado = Login::verificarAutenticacao('secretaria');
 
-// Verificando se há post e enviando mensagem de alerta
+
+// Validação dos dados do formulário
+$erros = [];
+$valores = [
+    'nome' => $nome,
+    'sexo' => $sexo,
+    'dataN' => $dataN,
+    'matricula' => $matricula,
+    'curso' => $curso,
+    'serie' => $serie,
+    'email' => $email,
+    'telefone' => $telefone,
+];
+
 if($_POST && $usuarioLogado){
-    if($nome && $sexo && $dataN && $matricula && $curso && $serie && $email && $telefone){
-        $msgAlert = "Aluno cadastrado com sucesso!";
-        $dataN = $alunoObj->dataFormatada($dataN);
-        $cadastro = Aluno::cadastrarAluno($matricula, $nome, $dataN, $sexo, $serie, $curso, $email, $telefone);
-    }else{
-        $msgAlert = "Termine de preencher todos os campos antes de enviar o formulário!";
+
+    if (!trim($nome)) {
+        $erros[] = 'O nome do aluno é obrigatório.';
+    }
+    
+    if (!in_array($sexo, ['M', 'F'], true)) {
+        $erros[] = 'O sexo do aluno é obrigatório.';
+    }
+    
+    if (!$dataN || !DateTime::createFromFormat('Y-m-d', $dataN)) {
+        $erros[] = 'A data de nascimento é obrigatória e deve estar no formato correto.';
+    }
+    
+    if (!trim($matricula)) {
+        $erros[] = 'A matrícula é obrigatória.';
+    }
+    
+    if (!trim($curso)) {
+        $erros[] = 'O curso é obrigatório.';
+    }
+    
+    if (!trim($serie)) {
+        $erros[] = 'A série é obrigatória.';
+        }
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $erros[] = 'O email informado é inválido.';
+            }
+            $telefoneSomenteNumeros = preg_replace('/\D+/', '', $telefone);
+            if (!$telefoneSomenteNumeros || strlen($telefoneSomenteNumeros) < 8) {
+                $erros[] = 'O telefone deve conter pelo menos 8 dígitos numéricos.';
+                }
+                
+                if (!$erros) {
+                    $matriculaExistente = $alunoObj->buscarPorMatricula($matricula);
+                    if ($matriculaExistente) {
+                        $erros[] = 'Esta matrícula já está cadastrada.';
+                        }
+                        }
+                        
+                        if (!$erros) {
+                            $dataN = $alunoObj->dataFormatada($dataN);
+                            $cadastro = Aluno::cadastrarAluno($matricula, $nome, $dataN, $sexo, $serie, $curso, $email, $telefoneSomenteNumeros);
+                            if ($cadastro) {
+                                header('LOCATION:' . constant('URL_LOCAL_SITE') . "?pagina=lista-aluno");
+                                exit;
+                                }
+        $erros[] = 'Erro ao cadastrar o aluno. Tente novamente.';
     }
 }
 
