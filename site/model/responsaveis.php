@@ -28,6 +28,17 @@ class Responsaveis
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Lista responsáveis por aluno
+    public function listarPorAluno($idAluno)
+    {
+        $pdo = Database::conexao();
+        $sql = "SELECT * FROM responsavel WHERE idAluno = :idAluno ORDER BY id DESC";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(':idAluno', $idAluno, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     // Busca por id (chave primaria id)
     public function buscarPorId($id)
     {
