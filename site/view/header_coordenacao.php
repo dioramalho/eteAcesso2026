@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="<?= constant("URL_LOCAL_BASE")?>assets/css/dashboard-cards.css">
     
     <title>Acesso Inteligente ETE</title>
-    <script>
-        // Atualiza automaticamente apenas na página de painel em tempo real, não no formulário de cadastro
-        if (window.location.search.indexOf('pagina=secretaria') !== -1) {
-            setTimeout(function() {
-                location.reload();
-            }, 10000);
-        }
-    </script>
+    <!-- <script> -->
+    <!--     // Atualiza automaticamente apenas na página de painel em tempo real, não no formulário de cadastro -->
+    <!--     if (window.location.search.indexOf('pagina=secretaria') !== -1) { -->
+    <!--         setTimeout(function() { -->
+    <!--             location.reload(); -->
+    <!--         }, 10000); -->
+    <!--     } -->
+    <!-- </script> -->
 </head>
 <body>
