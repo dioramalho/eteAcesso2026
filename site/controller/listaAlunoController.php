@@ -1,9 +1,10 @@
 <?php
-@include_once '../../configuracao/configuracao.php';
-@include_once '../../configuracao/conexao.php';
-@include_once '../model/aluno.php';
-@include_once './model/login.php';
-@include_once '../model/login.php';
+@include_once __DIR__ . '/../../configuracao/configuracao.php';
+@include_once __DIR__ . '/../../configuracao/conexao.php';
+@include_once __DIR__ . '/../model/aluno.php';
+@include_once __DIR__ . '/../model/responsaveis.php';
+@include_once __DIR__ . '/../model/login.php';
+@include_once __DIR__ . '/../model/login.php';
 
 /**
  * Identificação da pagina acessada via index
@@ -12,7 +13,8 @@ $idAluno = true;
 $limit = 20;
 $msgAlert = "";
 $exibir_paginacao = true;
-$msgAlert = ($_SERVER["REQUEST_METHOD"] == "GET" && !empty($_GET['msgAlert'])) ? $_GET['msgAlert'] : null;
+$method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
+$msgAlert = ($method === 'GET' && !empty($_GET['msgAlert'])) ? $_GET['msgAlert'] : null;
 
 if (@!$page) {
   $page = 1;
@@ -27,6 +29,20 @@ $titulo = "Lista De Alunos";
 
 //Criação de objetos
 $alunoObj = new Aluno(null, null, null);
+$responsavelObj = new Responsaveis();
+
+function carregarResponsaveisPorAluno($alunos, $responsavelObj)
+{
+  $porAluno = [];
+  if (is_array($alunos)) {
+    foreach ($alunos as $aluno) {
+      if (!empty($aluno['id'])) {
+        $porAluno[$aluno['id']] = $responsavelObj->listarPorAluno($aluno['id']);
+      }
+    }
+  }
+  return $porAluno;
+}
 
 $usuarioLogado = Login::verificarAutenticacao('secretaria');
 
@@ -38,9 +54,10 @@ if (@$paginaUrl && $usuarioLogado) {
   $exibirFormulario = true;
   $alunoRetorno = $alunoObj->paginacao($idAluno);
   $listaAlunos = $alunoObj->ListaDeAluno();
-  @include_once './view/header.php';
-  @include_once './view/listaDeAluno.php';
-  @include_once './view/footer.php';
+  $responsaveisPorAluno = carregarResponsaveisPorAluno($alunoRetorno, $responsavelObj);
+  @include_once __DIR__ . '/../view/header.php';
+  @include_once __DIR__ . '/../view/listaDeAluno.php';
+  @include_once __DIR__ . '/../view/footer.php';
 }
 
 if(@$paginaUrl && !$usuarioLogado) {
@@ -65,20 +82,22 @@ if (isset($_POST["submit"])) {
       if ($check !== false) {
         $exibirFormulario = true;
         $alunoRetorno = $alunoObj->ListaDeAluno($idAluno);
+        $responsaveisPorAluno = carregarResponsaveisPorAluno($alunoRetorno, $responsavelObj);
         @$exibirFormulario = true;
         $msgAlert = ' Imagem inserida com sucesso ';
-        @include_once '../view/header.php';
-        @include_once '../view/listaDeAluno.php';
-        @include_once '../view/footer.php';
+        @include_once __DIR__ . '/../view/header.php';
+        @include_once __DIR__ . '/../view/listaDeAluno.php';
+        @include_once __DIR__ . '/../view/footer.php';
         $uploadOk = 1;
       } else {
         $exibirFormulario = true;
         $alunoRetorno = $alunoObj->ListaDeAluno($idAluno);
+        $responsaveisPorAluno = carregarResponsaveisPorAluno($alunoRetorno, $responsavelObj);
         @$exibirFormulario = true;
         $msgAlert = ' imagem não foi inserida ';
-        @include_once '../view/header.php';
-        @include_once '../view/listaDeAluno.php';
-        @include_once '../view/footer.php';
+        @include_once __DIR__ . '/../view/header.php';
+        @include_once __DIR__ . '/../view/listaDeAluno.php';
+        @include_once __DIR__ . '/../view/footer.php';
         $uploadOk = 0;
       }
     } else {
@@ -96,19 +115,21 @@ if (isset($_POST['termo'])) {
   if (!empty($resultado_pesquisa)) {
     $listaAlunos = $resultado_pesquisa;
     $alunoRetorno = $resultado_pesquisa;
+    $responsaveisPorAluno = carregarResponsaveisPorAluno($alunoRetorno, $responsavelObj);
     $exibirFormulario = true;
-    @include_once '../view/header.php';
-    @include_once '../view/listaDeAluno.php';
-   
+    @include_once __DIR__ . '/../view/header.php';
+    @include_once __DIR__ . '/../view/listaDeAluno.php';
+
 
   } elseif (empty($resultado_pesquisa)) {
     $alunoRetorno = $alunoObj->paginacao($idAluno);
     $listaAlunos = $alunoObj->ListaDeAluno();
+    $responsaveisPorAluno = carregarResponsaveisPorAluno($alunoRetorno, $responsavelObj);
     $exibirFormulario = true;
     $exibir_paginacao = true;
     $msgAlert = 'Aluno não encontrado!';
-    @include_once '../view/header.php';
-    @include_once '../view/listaDeAluno.php';
+    @include_once __DIR__ . '/../view/header.php';
+    @include_once __DIR__ . '/../view/listaDeAluno.php';
   }
 }
 // if($_POST){

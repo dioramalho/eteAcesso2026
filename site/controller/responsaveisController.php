@@ -64,6 +64,14 @@ if (isset($_GET['pagina']) && $_GET['pagina'] === 'cadastro-responsavel') {
     exit;
 }
 
+// Se a rota é a página de edição, exibe o formulário de edição
+if (isset($_GET['pagina']) && $_GET['pagina'] === 'responsavel-editar') {
+    include_once __DIR__ . '/../view/header.php';
+    include_once __DIR__ . '/../view/editarResponsavel.php';
+    include_once __DIR__ . '/../view/footer.php';
+    exit;
+}
+
 @$idAluno = ($_SERVER["REQUEST_METHOD"] == "GET" && !empty($_GET['idAluno'])) ? $_GET['idAluno'] : null;
 if (!isset($_SESSION["usuario"]) || (!$_SESSION["usuario"]["idAluno"] == $idAluno && !$_SESSION["usuario"]["logado"] == true)) {
     header('LOCATION:' . constant('URL_LOCAL_SITE') . "?pagina=login-responsavel&idAluno=$idAluno");
