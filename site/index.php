@@ -86,6 +86,11 @@ if ($paginaUrl === 'acesso') {
     include_once './model/responsaveis.php';
     include_once './controller/responsaveisController.php';
 
+}elseif ($paginaUrl === 'responsavel-editar') {
+    if ($_GET && isset($_GET['id'])) { $idResponsavel = $_GET['id'];} else { $idResponsavel = 0; }
+    include_once './model/responsaveis.php';
+    include_once './controller/responsaveisController.php';
+
 }   elseif ($paginaUrl === 'cadastro-coordenacao') {
     include_once './controller/cadastroCoordenacaoController.php';
 
