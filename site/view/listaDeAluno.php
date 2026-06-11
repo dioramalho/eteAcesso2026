@@ -91,18 +91,69 @@
                                 </td>
                                 <td>
                                     <div class="d-flex gap-2 flex-wrap">
-                                        <a type="button" class="btn btn-outline-primary btn-sm" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=cadastro-responsavel&idAluno=<?= $aluno['id'] ?>">Responsável</a>
+                                        <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#responsavelModal-<?= $aluno['id'] ?>">
+                                            Responsável
+                                        </button>
                                         <a type="button" class="btn btn-danger btn-sm" href="<?= constant("URL_LOCAL_SITE") ?>?pagina=deletar-aluno&idAluno=<?= $aluno['id'] ?>">Deletar</a>
                                     </div>
                                 </td>
-
-
 
                             </tr>
                         <?php endforeach ?>
 
                     </tbody>
                 </table>
+
+                <?php foreach ($alunoRetorno as $aluno) : ?>
+                    <div class="modal fade" id="responsavelModal-<?= $aluno['id'] ?>" tabindex="-1" aria-labelledby="responsavelModalLabel-<?= $aluno['id'] ?>" aria-hidden="true">
+                        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="responsavelModalLabel-<?= $aluno['id'] ?>">Responsáveis de <?= htmlspecialchars($aluno['Nome'] ?? 'Aluno') ?></h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <?php $responsaveis = $responsaveisPorAluno[$aluno['id']] ?? []; ?>
+                                    <?php if (!empty($responsaveis)) : ?>
+                                        <div class="table-responsive-sm">
+                                            <table class="table table-bordered table-hover align-middle">
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th>Nome</th>
+                                                        <th>Email</th>
+                                                        <th>Telefone</th>
+                                                        <th>Ações</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php foreach ($responsaveis as $responsavel) : ?>
+                                                        <tr>
+                                                            <td><?= htmlspecialchars($responsavel['nome']) ?></td>
+                                                            <td><?= htmlspecialchars($responsavel['email']) ?></td>
+                                                            <td><?= htmlspecialchars($responsavel['telefone']) ?></td>
+                                                            <td class="d-flex gap-2 flex-wrap">
+                                                                <a href="<?= constant("URL_LOCAL_SITE") ?>?pagina=responsavel-editar&id=<?= $responsavel['id'] ?>" class="btn btn-primary btn-sm">Editar</a>
+                                                                <a href="<?= constant("URL_LOCAL_FORMS") ?>responsaveisController.php?acao=excluir&id=<?= $responsavel['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir este responsável?')">Excluir</a>
+                                                            </td>
+                                                        </tr>
+                                                    <?php endforeach; ?>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    <?php else : ?>
+                                        <p class="mb-0">Nenhum responsável cadastrado para este aluno.</p>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="<?= constant("URL_LOCAL_SITE") ?>?pagina=cadastro-responsavel&idAluno=<?= $aluno['id'] ?>" class="btn btn-success">
+                                        Cadastrar novo responsável
+                                    </a>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
                 <?php
 
                 if ($exibir_paginacao) :
