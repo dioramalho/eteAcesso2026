@@ -67,5 +67,5 @@ if (isset($idResponsavel) && $idResponsavel > 0) {
 </div>
 
 <?php
-include_once __DIR__ . '/../rodape_interno.php';
+#include_once __DIR__ . '/../rodape_interno.php';
 ?>
