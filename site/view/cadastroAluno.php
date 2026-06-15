@@ -64,6 +64,7 @@
                             <select name="curso" id="inputCurso"  class="form-select" required>
                                 <option value="" hidden>Selecione o curso...</option>
                                 <option value="TDS" <?= (isset($valores['curso']) && $valores['curso'] === 'TDS') ? 'selected' : '' ?>>Análise e Desenvolvimento de Sistemas</option>
+                                <option value="ADM" <?= (isset($valores['curso']) && $valores['curso'] === 'ADM') ? 'selected' : '' ?>>Administração</option>
                                 <option value="LOG" <?= (isset($valores['curso']) && $valores['curso'] === 'LOG') ? 'selected' : '' ?>>Logística</option>
                             </select>
                             <div class="valid-feedback">Preenchido.</div>
