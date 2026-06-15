@@ -91,9 +91,8 @@ if ($paginaUrl === 'acesso') {
     include_once './model/responsaveis.php';
     include_once './controller/responsaveisController.php';
 
-}   elseif ($paginaUrl === 'cadastro-coordenacao') {
 } elseif ($paginaUrl === 'cadastro-coordenacao') {
-    include_once './controller/cadastroCoordenacaoController.php';
+  include_once './controller/cadastroCoordenacaoController.php';
 
 } elseif ($paginaUrl === 'cadastro-aluno'){
     include_once './model/aluno.php';
