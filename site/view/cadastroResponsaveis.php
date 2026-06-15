@@ -65,6 +65,6 @@ include_once __DIR__ . '/../view/topo_interno.php';
 </div>
 
 <?php
-include_once __DIR__ . '/../rodape_interno.php';
+#include_once __DIR__ . '/../rodape_interno.php';
 ?>
 
