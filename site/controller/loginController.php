@@ -76,6 +76,6 @@ if(!$retorno) {
     @include_once './view/loginSecretaria.php';
     @include_once './view/footer.php';
 }
-    
-if($retorno && $tipo === 'secretaria') header('LOCATION:'.constant('URL_LOCAL_SITE')."?pagina=dashboard");
+ @header('LOCATION:'.constant('URL_LOCAL_SITE')."?pagina=dashboard");   
+
 ?>
